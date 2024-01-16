@@ -9,24 +9,8 @@
       "heightmap": "OCEAN_FLOOR"
     },
     {
-      "type": "minecraft:rarity_filter",
-      "chance": 64
-    },
-    {
       "type": "minecraft:count",
-      "count": {
-        "type": "minecraft:weighted_list",
-        "distribution": [
-          {
-            "data": 3,
-            "weight": 9
-          },
-          {
-            "data": 5,
-            "weight": 1
-          }
-        ]
-      }
+      "count": 8
     },
     {
       "type": "minecraft:biome"

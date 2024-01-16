@@ -34,7 +34,7 @@ public class AzureTreeFeature extends Feature<NoneFeatureConfiguration> {
 
     @Override
     public boolean place(FeaturePlaceContext<NoneFeatureConfiguration> reader) {
-        if (reader.origin().getY() > 10 && reader.level().getBlockState(reader.origin().below()).is(TagKey.create(Registries.BLOCK, new ResourceLocation("outer_end:end_plantable_on"))))
+        if (reader.origin().getY() > 10 && reader.level().getBlockState(reader.origin().below()).is(TagKey.create(Registries.BLOCK, new ResourceLocation("outer_end:end_plantable_on"))) && !reader.level().getBlockState(reader.origin().below()).is(OuterEndBlocks.AZURE_STAMEN.get()))
             generateTree(reader);
         else
             return false;
@@ -51,8 +51,6 @@ public class AzureTreeFeature extends Feature<NoneFeatureConfiguration> {
 
 
     public static void generateTree(FeaturePlaceContext<NoneFeatureConfiguration> context) {
-        generateTreeLarge(context);
-
         if (context.random().nextDouble() < .0675) {
             generateTreeLarge(context);
         } else if (context.random().nextDouble() < 0.25) {
@@ -70,7 +68,7 @@ public class AzureTreeFeature extends Feature<NoneFeatureConfiguration> {
         int yPos;
 
         // Removes the sapling
-        setBlock(world.getLevel(), pos, OuterEndBlocks.AZURE_STEM.get().defaultBlockState());
+        setBlock(world, pos, OuterEndBlocks.AZURE_STEM.get().defaultBlockState());
 
         int height = rand.nextInt(4) + 8;
         for (yPos = 0; yPos <= height; yPos++) {
@@ -216,8 +214,12 @@ public class AzureTreeFeature extends Feature<NoneFeatureConfiguration> {
     }
 
     public static void setBlock(WorldGenLevel world, BlockPos pos, BlockState state) {
-//        if (world.getChunk(pos).) {
-            world.setBlock(pos, state, Block.UPDATE_NONE);
-//        }
+        if (world instanceof WorldGenRegion) {
+            if (chunkGenerating == null || !chunkGenerating.getPos().equals(new ChunkPos(pos)))
+                chunkGenerating = ((WorldGenRegion) world).getChunk(pos);
+            chunkGenerating.setBlockState(pos, state, false);
+        } else {
+            world.setBlock(pos, state, 3);
+        }
     }
 }

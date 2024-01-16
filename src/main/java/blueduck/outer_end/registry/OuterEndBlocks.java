@@ -1,6 +1,7 @@
 package blueduck.outer_end.registry;
 
 import blueduck.outer_end.TheOuterEnd;
+import blueduck.outer_end.block.EndSaplingBlock;
 import blueduck.outer_end.block.EnderDoublePlant;
 import blueduck.outer_end.block.EnderTallGrassBlock;
 import blueduck.outer_end.block.TangledVioliteBlock;
@@ -36,12 +37,13 @@ public class OuterEndBlocks {
     public static final RegistryObject<Block> AZURE_PRESSURE_PLATE = registerBlock("azure_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, Block.Properties.copy(Blocks.OAK_PRESSURE_PLATE), BlockSetType.MANGROVE));
     public static final RegistryObject<Block> AZURE_LEAVES = registerBlock("azure_leaves", () -> new LeavesBlock(Block.Properties.copy(Blocks.MANGROVE_LEAVES)));
     public static final RegistryObject<Block> AZURE_STAMEN = registerBlock("azure_stamen", () -> new Block(Block.Properties.copy(Blocks.SHROOMLIGHT)));
-    public static final RegistryObject<Block> AZURE_BUD = registerBlock("azure_bud", () -> new SaplingBlock(new AzureTreeGrower(), Block.Properties.copy(Blocks.OAK_SAPLING)));
+    public static final RegistryObject<Block> AZURE_BUD = registerBlock("azure_bud", () -> new EndSaplingBlock(new AzureTreeGrower(), Block.Properties.copy(Blocks.OAK_SAPLING)));
 
     public static final RegistryObject<Block> AZURE_GRASS = registerBlock("azure_grass", () -> new Block(Block.Properties.copy(Blocks.END_STONE)));
     public static final RegistryObject<Block> AZURE_SPROUTS = registerBlock("azure_sprouts", () -> new EnderTallGrassBlock(Block.Properties.copy(Blocks.TALL_GRASS).sound(SoundType.POINTED_DRIPSTONE)));
     public static final RegistryObject<Block> ENDER_ROOTS = registerBlock("ender_roots", () -> new EnderTallGrassBlock(Block.Properties.copy(Blocks.TALL_GRASS).sound(SoundType.POINTED_DRIPSTONE)));
     public static final RegistryObject<Block> TALL_ENDER_ROOTS = registerBlock("tall_ender_roots", () -> new EnderDoublePlant(Block.Properties.copy(Blocks.TALL_GRASS).sound(SoundType.POINTED_DRIPSTONE)));
+    public static final RegistryObject<Block> AZURE_VINES = registerBlock("azure_vines", () -> new VineBlock(Block.Properties.copy(Blocks.MANGROVE_LEAVES)));
 
     public static final RegistryObject<Block> HIMMEL_BLOCK = registerBlock("himmel_block", () -> new Block(Block.Properties.copy(Blocks.PURPUR_BLOCK).mapColor(MapColor.COLOR_LIGHT_BLUE)));
     public static final RegistryObject<Block> HIMMEL_PILLAR = registerBlock("himmel_pillar", () -> new RotatedPillarBlock(Block.Properties.copy(HIMMEL_BLOCK.get())));

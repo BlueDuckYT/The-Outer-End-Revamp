@@ -15,7 +15,12 @@
     "criteria": {
       "minecraft:taiga": "2024-01-15 16:52:28 -0500",
       "minecraft:frozen_river": "2024-01-15 16:52:29 -0500",
-      "minecraft:snowy_taiga": "2024-01-15 16:52:11 -0500"
+      "minecraft:savanna_plateau": "2024-01-15 21:38:06 -0500",
+      "minecraft:beach": "2024-01-15 21:32:24 -0500",
+      "minecraft:snowy_taiga": "2024-01-15 16:52:11 -0500",
+      "minecraft:forest": "2024-01-15 21:32:31 -0500",
+      "minecraft:old_growth_spruce_taiga": "2024-01-15 21:32:39 -0500",
+      "minecraft:meadow": "2024-01-15 21:32:26 -0500"
     },
     "done": false
   },
@@ -124,6 +129,24 @@
   "minecraft:story/enter_the_end": {
     "criteria": {
       "entered_end": "2024-01-15 16:57:27 -0500"
+    },
+    "done": true
+  },
+  "outer_end:end/find_end_tower": {
+    "criteria": {
+      "in_city": "2024-01-15 21:09:59 -0500"
+    },
+    "done": true
+  },
+  "minecraft:end/elytra": {
+    "criteria": {
+      "elytra": "2024-01-15 21:42:24 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/chest": {
+    "criteria": {
+      "has_lots_of_items": "2024-01-15 23:20:16 -0500"
     },
     "done": true
   },

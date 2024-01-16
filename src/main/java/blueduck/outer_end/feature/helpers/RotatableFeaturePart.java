@@ -2,6 +2,7 @@ package blueduck.outer_end.feature.helpers;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.Vec3i;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -26,7 +27,7 @@ public class RotatableFeaturePart {
             if (dir == null) currentPos.set(position);
             else {
                 Direction offset;
-                if (dir.getAxis().isHorizontal()) offset = Direction.fromYRot(dir.toYRot()+rotation.get2DDataValue());
+                if (dir.getAxis().isHorizontal()) offset = Direction.fromYRot(dir.toYRot()+rotation.toYRot());
                 else offset = dir;
                 currentPos.set(currentPos.get().offset(offset.getNormal()));
                 setter.accept(currentPos.get());
