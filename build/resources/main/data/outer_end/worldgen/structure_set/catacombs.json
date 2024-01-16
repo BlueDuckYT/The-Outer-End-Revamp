@@ -1,0 +1,15 @@
+{
+  "structures": [
+    {
+      "structure": "outer_end:catacombs",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 319514384,
+    "spacing": 21,
+    "separation": 16,
+    "type": "minecraft:random_spread"
+  },
+  "fallback": "minecraft:empty"
+}

@@ -1,0 +1,247 @@
+{
+
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+
+      "weight": 50,
+      "element": {
+
+
+        "location": "outer_end:tower/basement/rooms/room_1",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 50,
+      "element": {
+
+
+        "location": "outer_end:tower/basement/rooms/room_2",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 80,
+      "element": {
+
+
+        "location": "outer_end:tower/basement/rooms/room_3",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 40,
+      "element": {
+
+
+        "location": "outer_end:tower/basement/rooms/room_4",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 10,
+      "element": {
+
+
+        "location": "outer_end:tower/basement/rooms/portal_room",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 10,
+      "element": {
+
+
+        "location": "outer_end:tower/basement/rooms/treasure_room",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 10,
+      "element": {
+
+
+        "location": "outer_end:tower/basement/rooms/wither_room",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 20,
+      "element": {
+
+
+        "location": "outer_end:tower/basement/rooms/staircase_room",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 20,
+      "element": {
+
+
+        "location": "outer_end:tower/basement/rooms/ladder_room",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 10,
+      "element": {
+
+
+        "location": "outer_end:tower/basement/rooms/lab_room",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 10,
+      "element": {
+
+
+        "location": "outer_end:tower/basement/rooms/jukebox_room",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 10,
+      "element": {
+
+
+        "location": "outer_end:tower/basement/rooms/grass_room",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 10,
+      "element": {
+
+
+        "location": "outer_end:tower/basement/rooms/plant_room",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 10,
+      "element": {
+
+
+        "location": "outer_end:tower/basement/rooms/stalker_room",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 5,
+      "element": {
+
+
+        "location": "outer_end:tower/basement/rooms/elytra_room",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 1,
+      "element": {
+
+
+        "location": "outer_end:tower/basement/rooms/heisenberg",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+
+  ]
+}

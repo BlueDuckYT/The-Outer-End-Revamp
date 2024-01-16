@@ -1,0 +1,15 @@
+{
+  "type": "outer_end:large_jigsaw_structure",
+  "biomes": "#minecraft:has_structure/end_city",
+  "max_distance_from_center": 116,
+  "size": 25,
+  "spawn_overrides": {},
+  "start_height": {
+    "absolute": 0
+  },
+  "project_start_to_heightmap": "WORLD_SURFACE",
+  "start_pool": "outer_end:tower/tower_bases",
+  "step": "surface_structures",
+  "terrain_adaptation": "beard_thin",
+  "use_expansion_hack": true
+}

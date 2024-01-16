@@ -1,0 +1,112 @@
+{
+
+
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+
+      "weight": 40,
+      "element": {
+
+
+        "location": "outer_end:catacombs/rooms/room_1",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 40,
+      "element": {
+
+
+        "location": "outer_end:catacombs/rooms/room_2",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 60,
+      "element": {
+
+
+        "location": "outer_end:catacombs/rooms/burial_room",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 40,
+      "element": {
+
+
+        "location": "outer_end:catacombs/rooms/azure_room",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 40,
+      "element": {
+
+
+        "location": "outer_end:catacombs/rooms/endermite_room",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 25,
+      "element": {
+
+
+        "location": "outer_end:catacombs/rooms/shulker_room",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 30,
+      "element": {
+
+
+        "location": "outer_end:catacombs/rooms/stage_room",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

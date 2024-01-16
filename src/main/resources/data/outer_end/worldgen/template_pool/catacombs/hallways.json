@@ -1,0 +1,202 @@
+{
+
+
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+
+      "weight": 30,
+      "element": {
+
+
+        "location": "outer_end:catacombs/hallways/straight_1",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 50,
+      "element": {
+
+
+        "location": "outer_end:catacombs/hallways/straight_2",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 50,
+      "element": {
+
+
+        "location": "outer_end:catacombs/hallways/straight_3",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 30,
+      "element": {
+
+
+        "location": "outer_end:catacombs/hallways/straight_4",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 70,
+      "element": {
+
+
+        "location": "outer_end:catacombs/hallways/four_way",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 100,
+      "element": {
+
+
+        "location": "outer_end:catacombs/hallways/corner_1",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 75,
+      "element": {
+
+
+        "location": "outer_end:catacombs/hallways/split_side",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 75,
+      "element": {
+
+
+        "location": "outer_end:catacombs/hallways/room_end",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 40,
+      "element": {
+
+
+        "location": "outer_end:catacombs/hallways/room_side",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 20,
+      "element": {
+
+
+        "location": "outer_end:catacombs/hallways/down_staircase_entry",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 1,
+      "element": {
+
+
+        "location": "outer_end:catacombs/hallways/down_staircase_stairs",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 1,
+      "element": {
+
+
+        "location": "outer_end:catacombs/hallways/down_start",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 1,
+      "element": {
+
+
+        "location": "outer_end:catacombs/hallways/down_after_entrance",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

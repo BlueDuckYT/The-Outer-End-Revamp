@@ -1,0 +1,7 @@
+{
+    "parent": "block/template_trapdoor_top",
+    "render_type": "cutout_mipped",
+    "textures": {
+        "texture": "outer_end:block/azure_trapdoor"
+    }
+}

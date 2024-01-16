@@ -1,0 +1,7 @@
+{
+  "parent": "block/wall_inventory",
+  "textures": {
+    "wall": "outer_end:block/violite_bricks",
+    "particle": "outer_end:block/violite_bricks"
+  }
+}

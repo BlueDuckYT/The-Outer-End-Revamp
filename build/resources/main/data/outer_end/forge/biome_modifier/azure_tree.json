@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#has_structure/end_city",
+  "features": "outer_end:azure_tree_feature",
+  "step": "vegetal_decoration"
+}

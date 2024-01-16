@@ -1,0 +1,15 @@
+{
+  "structures": [
+    {
+      "structure": "outer_end:end_tower",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 349816441,
+    "spacing": 25,
+    "separation": 15,
+    "type": "minecraft:random_spread"
+  },
+  "fallback": "minecraft:empty"
+}
