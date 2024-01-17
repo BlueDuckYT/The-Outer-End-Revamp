@@ -39,7 +39,7 @@ public class Spectrafly extends PathfinderMob implements FlyingAnimal {
     public void registerGoals() {
         this.goalSelector.addGoal(0, new Spectrafly.ParrotWanderGoal(this, 1.0D));
         this.goalSelector.addGoal(0, new PanicGoal(this, 1.25D));
-        this.goalSelector.addGoal(0, new FloatGoal(this));
+        this.goalSelector.addGoal(1, new FloatGoal(this));
         this.goalSelector.addGoal(1, new LookAtPlayerGoal(this, Player.class, 8.0F));
         this.goalSelector.addGoal(6, new FollowMobGoal(this, 1.0D, 3.0F, 7.0F));
 
