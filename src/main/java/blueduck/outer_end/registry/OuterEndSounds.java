@@ -16,6 +16,8 @@ public class OuterEndSounds {
     public static final RegistryObject<SoundEvent> DISC_GALACTIC_WAVE = SOUNDS.register("music.outer_end.disc.galactic_wave", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("outer_end", "music.outer_end.disc.galactic_wave")));
     public static final RegistryObject<SoundEvent> DISC_UNKNOWN_FRONTIER = SOUNDS.register("music.outer_end.disc.unknown_frontier", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("outer_end", "music.outer_end.disc.unknown_frontier")));
 
+    public static final RegistryObject<SoundEvent> MUSIC_AZURE_FOREST = SOUNDS.register("music.outer_end.azure", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("outer_end", "music.outer_end.azure")));
+    public static final RegistryObject<SoundEvent> MUSIC_CRYSTAL_CRAG = SOUNDS.register("music.outer_end.crystal_crag", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("outer_end", "music.outer_end.crystal_crag")));
     public static final RegistryObject<SoundEvent> BLOCK_VIOLITE_BREAK = SOUNDS.register("block.outer_end.violite.break", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("outer_end", "block.outer_end.violite.break")));
     public static final RegistryObject<SoundEvent> BLOCK_VIOLITE_STEP = SOUNDS.register("block.outer_end.violite.step", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("outer_end", "block.outer_end.violite.step")));
     public static final RegistryObject<SoundEvent> BLOCK_VIOLITE_PLACE = SOUNDS.register("block.outer_end.violite.place", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("outer_end", "block.outer_end.violite.place")));

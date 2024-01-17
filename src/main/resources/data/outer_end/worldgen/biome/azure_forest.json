@@ -9,10 +9,17 @@
       "sound": "minecraft:ambient.cave",
       "tick_delay": 6000
     },
+    "music": {
+      "max_delay": 24000,
+      "min_delay": 1200,
+      "replace_current_music": false,
+      "sound": "outer_end:music.outer_end.azure"
+    },
     "sky_color": 0,
     "water_color": 4159204,
     "water_fog_color": 329011
   },
+
   "features": [
     [],
     [],
@@ -30,6 +37,7 @@
       "outer_end:azure_sprouts_feature",
       "outer_end:ender_roots_feature",
       "outer_end:tall_ender_roots_feature",
+      "outer_end:azure_berry_vines_feature",
       "outer_end:azure_vines"
     ]
   ],
@@ -38,7 +46,14 @@
   "spawners": {
     "ambient": [],
     "axolotls": [],
-    "creature": [],
+    "creature": [
+      {
+        "type": "outer_end:spectrafly",
+        "maxCount": 4,
+        "minCount": 1,
+        "weight": 10
+      }
+    ],
     "misc": [],
     "monster": [
       {

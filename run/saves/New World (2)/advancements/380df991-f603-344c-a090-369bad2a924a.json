@@ -1,0 +1,21 @@
+{
+  "minecraft:recipes/decorations/crafting_table": {
+    "criteria": {
+      "unlock_right_away": "2024-01-16 10:06:31 -0500"
+    },
+    "done": true
+  },
+  "outer_end:end/find_catacombs": {
+    "criteria": {
+      "in_tower": "2024-01-16 10:06:32 -0500"
+    },
+    "done": true
+  },
+  "minecraft:end/find_end_city": {
+    "criteria": {
+      "in_city": "2024-01-16 10:26:38 -0500"
+    },
+    "done": true
+  },
+  "DataVersion": 3465
+}

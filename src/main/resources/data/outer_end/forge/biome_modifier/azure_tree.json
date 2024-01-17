@@ -1,6 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "#has_structure/end_city",
-  "features": "outer_end:crag_sphere_feature",
-  "step": "vegetal_decoration"
-}

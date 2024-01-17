@@ -1,11 +1,15 @@
 package blueduck.outer_end.registry;
 
 import blueduck.outer_end.TheOuterEnd;
-import blueduck.outer_end.block.EndSaplingBlock;
-import blueduck.outer_end.block.EnderDoublePlant;
-import blueduck.outer_end.block.EnderTallGrassBlock;
-import blueduck.outer_end.block.TangledVioliteBlock;
+import blueduck.outer_end.block.*;
 import blueduck.outer_end.feature.helpers.AzureTreeGrower;
+import com.mojang.datafixers.util.Pair;
+import com.teamabnormals.blueprint.common.block.sign.BlueprintCeilingHangingSignBlock;
+import com.teamabnormals.blueprint.common.block.sign.BlueprintStandingSignBlock;
+import com.teamabnormals.blueprint.common.block.sign.BlueprintWallHangingSignBlock;
+import com.teamabnormals.blueprint.common.block.sign.BlueprintWallSignBlock;
+import com.teamabnormals.blueprint.core.util.PropertyUtil;
+import com.teamabnormals.blueprint.core.util.registry.BlockSubRegistryHelper;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
@@ -21,6 +25,8 @@ import java.util.function.Supplier;
 public class OuterEndBlocks {
 
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, TheOuterEnd.MODID);
+    public static BlockSubRegistryHelper HELPER = TheOuterEnd.HELPER.getSubHelper(ForgeRegistries.BLOCKS);
+    public static WoodType AZURE = WoodType.register(new WoodType("outer_end:azure", BlockSetType.MANGROVE));
 
     public static final RegistryObject<Block> AZURE_STEM = registerBlock("azure_stem", () -> new RotatedPillarBlock(Block.Properties.copy(Blocks.OAK_LOG)));
     public static final RegistryObject<Block> STRIPPED_AZURE_STEM = registerBlock("azure_stripped_stem", () -> new RotatedPillarBlock(Block.Properties.copy(Blocks.OAK_LOG)));
@@ -35,6 +41,9 @@ public class OuterEndBlocks {
     public static final RegistryObject<Block> AZURE_FENCE_GATE = registerBlock("azure_fence_gate", () -> new FenceGateBlock(Block.Properties.copy(Blocks.OAK_PLANKS), WoodType.MANGROVE));
     public static final RegistryObject<Block> AZURE_BUTTON = registerBlock("azure_button", () -> new ButtonBlock(Block.Properties.copy(Blocks.OAK_BUTTON), BlockSetType.MANGROVE, 30, true));
     public static final RegistryObject<Block> AZURE_PRESSURE_PLATE = registerBlock("azure_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, Block.Properties.copy(Blocks.OAK_PRESSURE_PLATE), BlockSetType.MANGROVE));
+    public static final Pair<RegistryObject<BlueprintStandingSignBlock>, RegistryObject<BlueprintWallSignBlock>> AZURE_SIGNS = HELPER.createSignBlock("azure", AZURE, MapColor.COLOR_BLUE);
+    public static final Pair<RegistryObject<BlueprintCeilingHangingSignBlock>, RegistryObject<BlueprintWallHangingSignBlock>> AZURE_HANGING_SIGNS = HELPER.createHangingSignBlock("azure", AZURE, MapColor.COLOR_BLUE);
+
     public static final RegistryObject<Block> AZURE_LEAVES = registerBlock("azure_leaves", () -> new LeavesBlock(Block.Properties.copy(Blocks.MANGROVE_LEAVES)));
     public static final RegistryObject<Block> AZURE_STAMEN = registerBlock("azure_stamen", () -> new Block(Block.Properties.copy(Blocks.SHROOMLIGHT)));
     public static final RegistryObject<Block> AZURE_BUD = registerBlock("azure_bud", () -> new EndSaplingBlock(new AzureTreeGrower(), Block.Properties.copy(Blocks.OAK_SAPLING)));
@@ -44,6 +53,9 @@ public class OuterEndBlocks {
     public static final RegistryObject<Block> ENDER_ROOTS = registerBlock("ender_roots", () -> new EnderTallGrassBlock(Block.Properties.copy(Blocks.TALL_GRASS).sound(SoundType.POINTED_DRIPSTONE)));
     public static final RegistryObject<Block> TALL_ENDER_ROOTS = registerBlock("tall_ender_roots", () -> new EnderDoublePlant(Block.Properties.copy(Blocks.TALL_GRASS).sound(SoundType.POINTED_DRIPSTONE)));
     public static final RegistryObject<Block> AZURE_VINES = registerBlock("azure_vines", () -> new VineBlock(Block.Properties.copy(Blocks.MANGROVE_LEAVES)));
+
+    public static final RegistryObject<Block> AZURE_BERRY_VINE = BLOCKS.register("azure_berry_vine", () -> new AzureBerryVineBlock(Block.Properties.copy(Blocks.TWISTING_VINES)));
+    public static final RegistryObject<Block> AZURE_BERRY_VINE_TOP = BLOCKS.register("azure_berry_vine_top", () -> new AzureBerryVineTop(Block.Properties.copy(Blocks.TWISTING_VINES)));
 
     public static final RegistryObject<Block> HIMMEL_BLOCK = registerBlock("himmel_block", () -> new Block(Block.Properties.copy(Blocks.PURPUR_BLOCK).mapColor(MapColor.COLOR_LIGHT_BLUE)));
     public static final RegistryObject<Block> HIMMEL_PILLAR = registerBlock("himmel_pillar", () -> new RotatedPillarBlock(Block.Properties.copy(HIMMEL_BLOCK.get())));

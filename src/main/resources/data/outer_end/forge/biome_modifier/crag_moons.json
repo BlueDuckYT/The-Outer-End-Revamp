@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#has_structure/end_city",
+  "features": "outer_end:crag_moon_feature",
+  "step": "local_modifications"
+}

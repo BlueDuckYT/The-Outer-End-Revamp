@@ -19,6 +19,9 @@ public class OuterEndTabs {
                         for (var item : OuterEndItems.BLOCK_ITEMS.getEntries()) {
                             output.accept(item.get());
                         }
+                        for (var item : TheOuterEnd.HELPER.getItemSubHelper().getDeferredRegister().getEntries()) {
+                            output.accept(item.get());
+                        }
                         for (var item : OuterEndItems.ITEMS.getEntries()) {
                             output.accept(item.get());
                         }

@@ -21,6 +21,7 @@
   "block.outer_end.azure_slab": "Azure Slab",
   "block.outer_end.azure_stairs": "Azure Stairs",
   "block.outer_end.azure_sign": "Azure Sign",
+  "block.outer_end.azure_hanging_sign": "Azure Hanging Sign",
   "block.outer_end.azure_berry_vine": "Azure Berry Stalk",
   "block.outer_end.azure_berry_vine_top": "Azure Berry Stalk Top",
   "block.outer_end.potted_azure_bud": "Potted Azure Bud",
@@ -115,6 +116,7 @@
   "item.outer_end.stalker_meat": "Stalker Meat",
   "item.outer_end.cooked_stalker_meat": "Stalker Steak",
   "item.outer_end.azure_boat": "Azure Boat",
+  "item.outer_end.azure_chest_boat": "Azure Boat with Chest",
 
   "item.outer_end.rose_crystal_shard": "Rose Crystal Shard",
   "item.outer_end.mint_crystal_shard": "Mint Crystal Shard",
@@ -144,7 +146,7 @@
   "biome.outer_end.azure_forest": "Azure Forest",
   "biome.outer_end.crystal_crag": "Crystal Crag",
 
-  "advancements.end.find_end_tower.title": "A Corporate Metropolis",
+  "advancements.end.find_end_tower.title": "Ender Construction",
   "advancements.end.find_end_tower.description": "Enter the End Tower",
 
   "advancements.end.find_catacombs.title": "An Even Worse Fortress",

@@ -20,7 +20,9 @@ public class TangledVioliteBlock extends Block {
         super(p_152726_);
         budBlock = bud;
     }
-
+    public boolean isRandomlyTicking(BlockState p_57284_) {
+        return true;
+    }
     public void randomTick(BlockState p_220898_, ServerLevel p_220899_, BlockPos p_220900_, RandomSource p_220901_) {
         if (p_220901_.nextInt(GROWTH_CHANCE) == 0) {
             Direction direction = DIRECTIONS[p_220901_.nextInt(DIRECTIONS.length)];

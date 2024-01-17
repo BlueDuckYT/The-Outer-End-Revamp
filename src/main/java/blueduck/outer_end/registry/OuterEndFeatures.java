@@ -13,11 +13,14 @@ public class OuterEndFeatures {
     public static final DeferredRegister<Feature<?>> FEATURES = DeferredRegister.create(ForgeRegistries.FEATURES, TheOuterEnd.MODID);
 
     public static final RegistryObject<Feature<NoneFeatureConfiguration>> AZURE_TREE_FEATURE = FEATURES.register("azure_tree_feature", () -> new AzureTreeFeature(NoneFeatureConfiguration.CODEC));
+    public static final RegistryObject<Feature<NoneFeatureConfiguration>> AZURE_BERRY_VINES_FEATURE = FEATURES.register("azure_berry_vines", () -> new AzureBerryVineFeature(NoneFeatureConfiguration.CODEC));
+
     public static final RegistryObject<Feature<NoneFeatureConfiguration>> AZURE_VINES_FEATURE = FEATURES.register("azure_vines", () -> new AzureVinesFeature(NoneFeatureConfiguration.CODEC));
 
     public static final RegistryObject<Feature<NoneFeatureConfiguration>> CRYSTAL_SPIKE_FEATURE = FEATURES.register("crystal_spike_feature", () -> new CrystalSpikeFeature(NoneFeatureConfiguration.CODEC));
     public static final RegistryObject<Feature<NoneFeatureConfiguration>> DEAD_RAINBOW_FEATURE = FEATURES.register("dead_rainbow_feature", () -> new DeadRainbowFeature(NoneFeatureConfiguration.CODEC));
-    public static final RegistryObject<Feature<NoneFeatureConfiguration>> CRAG_SPHERE_FEATURE = FEATURES.register("crag_sphere_feature", () -> new CragSphereFeature(NoneFeatureConfiguration.CODEC));
+    public static final RegistryObject<Feature<NoneFeatureConfiguration>> CRAG_MOON_FEATURE = FEATURES.register("crag_moon_feature", () -> new CragMoonFeature(NoneFeatureConfiguration.CODEC));
+    public static final RegistryObject<Feature<NoneFeatureConfiguration>> CRAG_BOULDER_FEATURE = FEATURES.register("crag_boulder_feature", () -> new CragBoulderFeature(NoneFeatureConfiguration.CODEC));
 
 
 }

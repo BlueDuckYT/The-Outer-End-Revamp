@@ -15,6 +15,7 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.*;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.LeavesBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.chunk.ChunkAccess;
@@ -34,7 +35,7 @@ public class AzureTreeFeature extends Feature<NoneFeatureConfiguration> {
 
     @Override
     public boolean place(FeaturePlaceContext<NoneFeatureConfiguration> reader) {
-        if (reader.origin().getY() > 10 && reader.level().getBlockState(reader.origin().below()).is(TagKey.create(Registries.BLOCK, new ResourceLocation("outer_end:end_plantable_on"))) && !reader.level().getBlockState(reader.origin().below()).is(OuterEndBlocks.AZURE_STAMEN.get()))
+        if ((reader.level().getBlockState(reader.origin()).is(Blocks.AIR) || reader.level().getBlockState(reader.origin()).is(OuterEndBlocks.AZURE_BUD.get())) && reader.level().getBlockState(reader.origin().below()).is(TagKey.create(Registries.BLOCK, new ResourceLocation("outer_end:end_plantable_on"))) && !reader.level().getBlockState(reader.origin().below()).is(OuterEndBlocks.AZURE_STAMEN.get()))
             generateTree(reader);
         else
             return false;
