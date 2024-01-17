@@ -13,6 +13,8 @@
     "outer_end:azure_fence_gate",
     "outer_end:azure_button",
     "outer_end:azure_pressure_plate",
-    "outer_end:azure_stamen"
+    "outer_end:azure_stamen",
+    "outer_end:azure_sign",
+    "outer_end:azure_hanging_sign"
   ]
 }
