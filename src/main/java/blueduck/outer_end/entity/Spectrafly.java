@@ -44,7 +44,6 @@ public class Spectrafly extends PathfinderMob implements FlyingAnimal {
         this.goalSelector.addGoal(6, new FollowMobGoal(this, 1.0D, 3.0F, 7.0F));
 
         this.goalSelector.addGoal(8, new RandomStrollGoal(this, 20));
-
     }
     @Override
     public boolean isFlying() {
