@@ -110,7 +110,7 @@
     },
     {
 
-      "weight": 75,
+      "weight": 100,
       "element": {
 
 
@@ -145,6 +145,21 @@
 
 
         "location": "outer_end:catacombs/hallways/down_staircase_entry",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 5,
+      "element": {
+
+
+        "location": "outer_end:catacombs/hallways/down_staircase_stairs_2",
 
         "processors": "minecraft:empty",
 
