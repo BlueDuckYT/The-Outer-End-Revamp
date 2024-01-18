@@ -10,7 +10,7 @@
       "item": "minecraft:ghast_tear"
     },
     "E": {
-      "item": "outer_end:rose_crystal"
+      "tag": "outer_end:crystal_blocks"
     },
     "G": {
       "item": "minecraft:glass"
