@@ -6,9 +6,15 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "weight": 2,
+          "weight": 8,
           "quality": 0,
           "name": "minecraft:chests/stronghold_corridor"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 2,
+          "quality": 1,
+          "name": "outer_end:chests/catacomb_loot"
         }
       ]
     }
