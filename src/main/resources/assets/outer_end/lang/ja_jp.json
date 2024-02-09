@@ -1,8 +1,8 @@
 {
   "block.outer_end.azure_stem": "紺碧の幹",
   "block.outer_end.azure_pith": "紺碧の木",
-  "block.outer_end.azure_stripped_stem": "樹皮を剝いだ紺碧の幹",
-  "block.outer_end.azure_stripped_pith": "樹皮を剝いだ紺碧の木",
+  "block.outer_end.azure_stripped_stem": "樹皮を剥いだ紺碧の幹",
+  "block.outer_end.azure_stripped_pith": "樹皮を剥いだ紺碧の木",
   "block.outer_end.azure_planks": "紺碧の板材",
   "block.outer_end.azure_leaves": "紺碧の花びら",
   "block.outer_end.azure_stamen": "紺碧のおしべ",
@@ -36,7 +36,7 @@
   "block.outer_end.azure_chest": "紺碧のチェスト",
   "block.outer_end.azure_trapped_chest": "紺碧のトラップチェスト",
   "block.outer_end.azure_post": "紺碧の杭",
-  "block.outer_end.stripped_azure_post": "樹皮を剝いだ紺碧の杭",
+  "block.outer_end.stripped_azure_post": "樹皮を剥いだ紺碧の杭",
 
   "block.outer_end.himmel_block": "ヒンメルブロック",
   "block.outer_end.himmel_pillar": "ヒンメルの柱",
