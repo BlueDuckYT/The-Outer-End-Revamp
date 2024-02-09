@@ -1,6 +1,12 @@
 package blueduck.outer_end.entity;
 
+import blueduck.outer_end.registry.OuterEndSounds;
+import net.minecraft.core.BlockPos;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
@@ -12,6 +18,7 @@ import net.minecraft.world.entity.animal.IronGolem;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.ServerLevelAccessor;
 
 public class Entombed extends Monster {
 
@@ -32,6 +39,22 @@ public class Entombed extends Monster {
     }
 
     public static AttributeSupplier.Builder createAttributes() {
-        return Monster.createMonsterAttributes().add(Attributes.FOLLOW_RANGE, 16.0D).add(Attributes.MOVEMENT_SPEED, (double)0.25F).add(Attributes.ATTACK_DAMAGE, 6.0D).add(Attributes.ARMOR, 6.0D).add(Attributes.ATTACK_KNOCKBACK, 1.5D).add(Attributes.KNOCKBACK_RESISTANCE, 1F).add(Attributes.MAX_HEALTH, 20);
+        return Monster.createMonsterAttributes().add(Attributes.FOLLOW_RANGE, 16.0D).add(Attributes.MOVEMENT_SPEED, (double)0.25F).add(Attributes.ATTACK_DAMAGE, 9.0D).add(Attributes.ARMOR, 6.0D).add(Attributes.ATTACK_KNOCKBACK, 1.5D).add(Attributes.KNOCKBACK_RESISTANCE, 1F).add(Attributes.MAX_HEALTH, 30);
+    }
+
+    public static boolean canSpawn(EntityType<Entombed> entityType, ServerLevelAccessor level, MobSpawnType type, BlockPos pos, RandomSource rand) {
+        return checkMobSpawnRules(entityType, level, type, pos, rand);
+    }
+
+    public SoundEvent getAmbientSound() {
+        return OuterEndSounds.ENTITY_ENTOMBED_IDLE.get();
+    }
+
+    public SoundEvent getHurtSound(DamageSource p_33579_) {
+        return OuterEndSounds.ENTITY_ENTOMBED_HURT.get();
+    }
+
+    public SoundEvent getDeathSound() {
+        return OuterEndSounds.ENTITY_ENTOMBED_DEATH.get();
     }
 }

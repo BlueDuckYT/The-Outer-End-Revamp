@@ -35,7 +35,7 @@ public class AzureTreeFeature extends Feature<NoneFeatureConfiguration> {
 
     @Override
     public boolean place(FeaturePlaceContext<NoneFeatureConfiguration> reader) {
-        if ((reader.level().getBlockState(reader.origin()).is(Blocks.AIR) || reader.level().getBlockState(reader.origin()).is(OuterEndBlocks.AZURE_BUD.get())) && reader.level().getBlockState(reader.origin().below()).is(TagKey.create(Registries.BLOCK, new ResourceLocation("outer_end:end_plantable_on"))) && !reader.level().getBlockState(reader.origin().below()).is(OuterEndBlocks.AZURE_STAMEN.get()))
+        if (((reader.level().getBlockState(reader.origin()).is(Blocks.AIR) || !(reader.level().getBlockState(reader.origin()).isCollisionShapeFullBlock(reader.level(), reader.origin())) || reader.level().getBlockState(reader.origin()).is(OuterEndBlocks.AZURE_BUD.get()))) && reader.level().getBlockState(reader.origin().below()).is(TagKey.create(Registries.BLOCK, new ResourceLocation("outer_end:end_plantable_on"))))
             generateTree(reader);
         else
             return false;

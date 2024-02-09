@@ -42,7 +42,7 @@ public class AzureBerryVineFeature extends Feature<NoneFeatureConfiguration> {
                 } else if (l > 0) {
                     BlockPos blockpos2 = blockpos1.below();
                     if (blockstate.canSurvive(worldgenlevel, blockpos2) && !worldgenlevel.getBlockState(blockpos2.below()).is(OuterEndBlocks.AZURE_BERRY_VINE.get())) {
-                        worldgenlevel.setBlock(blockpos2.below(), blockstate.setValue(AzureBerryVineBlock.AGE, Integer.valueOf(randomsource.nextInt(2) + 1)), Block.UPDATE_ALL_IMMEDIATE);
+                        worldgenlevel.setBlock(blockpos2.below(), blockstate, Block.UPDATE_ALL_IMMEDIATE);
                         ++i;
                     }
                     break;

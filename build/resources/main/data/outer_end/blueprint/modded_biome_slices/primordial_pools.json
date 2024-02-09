@@ -1,0 +1,19 @@
+{
+	"levels": [
+		"minecraft:the_end"
+	],
+	"provider": {
+		"type": "blueprint:overlay",
+		"overlays": [
+			{
+				"biome_source": {
+					"type": "minecraft:checkerboard",
+					"biomes": "outer_end:primordial_pools",
+					"scale": 2
+				},
+				"matches_biomes": "#minecraft:has_structure/end_city"
+			}
+		]
+	},
+	"weight": 15
+}

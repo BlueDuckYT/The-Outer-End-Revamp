@@ -105,5 +105,46 @@
 			"outer_end:blocks/violite/step4",
 			"outer_end:blocks/violite/step5"
 		]
+	},
+	"entity.outer_end.himmelite.idle": {
+		"category": "entity",
+		"sounds": [
+			"outer_end:entities/himmelite/himmelite_chitter1",
+			"outer_end:entities/himmelite/himmelite_chitter2",
+			"outer_end:entities/himmelite/himmelite_chitter3"
+		]
+	},
+	"entity.outer_end.himmelite.hurt": {
+		"category": "entity",
+		"sounds": [
+			"outer_end:entities/himmelite/himmelite_hurt2"
+		]
+	},
+	"entity.outer_end.himmelite.death": {
+		"category": "entity",
+		"sounds": [
+			"outer_end:entities/himmelite/himmelite_death"
+		]
+	},
+	"entity.outer_end.entombed.idle": {
+		"category": "entity",
+		"sounds": [
+			"outer_end:entities/entombed/entombed_greeting",
+			"outer_end:entities/entombed/entombed_cry",
+			"outer_end:entities/entombed/entombed_cry_2"
+		]
+	},
+	"entity.outer_end.entombed.hurt": {
+		"category": "entity",
+		"sounds": [
+			"outer_end:entities/entombed/entombed_wail",
+			"outer_end:entities/entombed/entombed_wail2"
+		]
+	},
+	"entity.outer_end.entombed.death": {
+		"category": "entity",
+		"sounds": [
+			"outer_end:entities/entombed/entombed_death"
+		]
 	}
 }

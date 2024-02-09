@@ -4,7 +4,7 @@
   "elements": [
     {
 
-      "weight": 50,
+      "weight": 30,
       "element": {
 
 
@@ -19,7 +19,7 @@
     },
     {
 
-      "weight": 50,
+      "weight": 30,
       "element": {
 
 
@@ -34,7 +34,7 @@
     },
     {
 
-      "weight": 80,
+      "weight": 50,
       "element": {
 
 
@@ -49,7 +49,7 @@
     },
     {
 
-      "weight": 40,
+      "weight": 30,
       "element": {
 
 
@@ -204,6 +204,96 @@
 
 
         "location": "outer_end:tower/basement/rooms/stalker_room",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 10,
+      "element": {
+
+
+        "location": "outer_end:tower/basement/rooms/sniffer_room",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 15,
+      "element": {
+
+
+        "location": "outer_end:tower/basement/rooms/sculk_room",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 25,
+      "element": {
+
+
+        "location": "outer_end:tower/basement/rooms/brine_room",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 20,
+      "element": {
+
+
+        "location": "outer_end:tower/basement/rooms/small_room",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 25,
+      "element": {
+
+
+        "location": "outer_end:tower/basement/rooms/core_room",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+
+      "weight": 5,
+      "element": {
+
+
+        "location": "outer_end:tower/basement/rooms/aquarium",
 
         "processors": "minecraft:empty",
 

@@ -2,15 +2,8 @@
   "feature": "outer_end:azure_tree_feature",
   "placement": [
     {
-      "type": "minecraft:in_square"
-    },
-    {
-      "type": "minecraft:heightmap",
-      "heightmap": "MOTION_BLOCKING"
-    },
-    {
-      "type": "minecraft:count",
-      "count": 90
+      "type": "minecraft:count_on_every_layer",
+      "count": 6
     },
     {
       "type": "minecraft:biome"

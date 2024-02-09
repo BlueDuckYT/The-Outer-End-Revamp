@@ -1,5 +1,5 @@
 Java Launcher: C:\Users\maxba\.jdks\corretto-17.0.5\bin\java.exe
-Arguments: '--clean, C:\Users\maxba\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\joined\1.20.1-20230612.114412\joined-1.20.1-20230612.114412-srg.jar, --output, C:\Users\maxba\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.20.1-47.2.20\forge-1.20.1-47.2.20-binpatched.jar, --apply, C:\Users\maxba\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.20.1-47.2.20\forge-1.20.1-47.2.20-binpatches.lzma'
+Arguments: '--clean, C:\Users\maxba\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\joined\1.20.1-20230612.114412\joined-1.20.1-20230612.114412-srg.jar, --output, C:\Users\maxba\IdeaProjects\The-Outer-End-Revamp\build\fg_cache\net\minecraftforge\forge\1.20.1-47.0.46\forge-1.20.1-47.0.46-binpatched.jar, --apply, C:\Users\maxba\IdeaProjects\The-Outer-End-Revamp\build\fg_cache\net\minecraftforge\forge\1.20.1-47.0.46\forge-1.20.1-47.0.46-binpatches.lzma'
 Classpath:
  - C:\Users\maxba\.gradle\caches\forge_gradle\maven_downloader\net\minecraftforge\binarypatcher\1.1.1\binarypatcher-1.1.1-fatjar.jar
 Working directory: C:\Users\maxba\IdeaProjects\The-Outer-End-Revamp\build\_applyBinpatches_2
@@ -7,12 +7,12 @@ Main class: net.minecraftforge.binarypatcher.ConsoleTool
 ====================================
 Applying: 
   Clean:     C:\Users\maxba\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\joined\1.20.1-20230612.114412\joined-1.20.1-20230612.114412-srg.jar
-  Output:    C:\Users\maxba\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.20.1-47.2.20\forge-1.20.1-47.2.20-binpatched.jar
+  Output:    C:\Users\maxba\IdeaProjects\The-Outer-End-Revamp\build\fg_cache\net\minecraftforge\forge\1.20.1-47.0.46\forge-1.20.1-47.0.46-binpatched.jar
   KeepData:  false
   Unpatched: false
   Pack200:   false
   Legacy:    false
-Loading patches file: C:\Users\maxba\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.20.1-47.2.20\forge-1.20.1-47.2.20-binpatches.lzma
+Loading patches file: C:\Users\maxba\IdeaProjects\The-Outer-End-Revamp\build\fg_cache\net\minecraftforge\forge\1.20.1-47.0.46\forge-1.20.1-47.0.46-binpatches.lzma
   Reading patch com.mojang.blaze3d.pipeline.RenderTarget.binpatch
     Checksum: 151eb55a Exists: true
   Reading patch com.mojang.blaze3d.platform.GlStateManager$BlendState.binpatch
@@ -65,8 +65,6 @@ Loading patches file: C:\Users\maxba\.gradle\caches\forge_gradle\minecraft_user_
     Checksum: d183d4c0 Exists: true
   Reading patch com.mojang.blaze3d.vertex.PoseStack.binpatch
     Checksum: b0ec261e Exists: true
-  Reading patch com.mojang.blaze3d.vertex.SheetedDecalTextureGenerator.binpatch
-    Checksum: 7017e14 Exists: true
   Reading patch com.mojang.blaze3d.vertex.VertexConsumer.binpatch
     Checksum: c545de6e Exists: true
   Reading patch com.mojang.blaze3d.vertex.VertexFormat$1.binpatch
@@ -271,10 +269,6 @@ Loading patches file: C:\Users\maxba\.gradle\caches\forge_gradle\minecraft_user_
     Checksum: a818c7b1 Exists: true
   Reading patch net.minecraft.client.gui.screens.ChatScreen.binpatch
     Checksum: 2bf944d3 Exists: true
-  Reading patch net.minecraft.client.gui.screens.ConnectScreen$1.binpatch
-    Checksum: dfe2288e Exists: true
-  Reading patch net.minecraft.client.gui.screens.ConnectScreen.binpatch
-    Checksum: 9505c31e Exists: true
   Reading patch net.minecraft.client.gui.screens.LoadingOverlay$LogoTexture.binpatch
     Checksum: 1f24802d Exists: true
   Reading patch net.minecraft.client.gui.screens.LoadingOverlay.binpatch
@@ -285,8 +279,6 @@ Loading patches file: C:\Users\maxba\.gradle\caches\forge_gradle\minecraft_user_
     Checksum: c5cd0d3b Exists: true
   Reading patch net.minecraft.client.gui.screens.OptionsScreen.binpatch
     Checksum: f1e43890 Exists: true
-  Reading patch net.minecraft.client.gui.screens.PauseScreen.binpatch
-    Checksum: c9ee4466 Exists: true
   Reading patch net.minecraft.client.gui.screens.Screen$DeferredTooltipRendering.binpatch
     Checksum: e210acb5 Exists: true
   Reading patch net.minecraft.client.gui.screens.Screen$NarratableSearchResult.binpatch
@@ -489,20 +481,6 @@ Loading patches file: C:\Users\maxba\.gradle\caches\forge_gradle\minecraft_user_
     Checksum: 7341b19 Exists: true
   Reading patch net.minecraft.client.particle.EnchantmentTableParticle.binpatch
     Checksum: 5bdaf794 Exists: true
-  Reading patch net.minecraft.client.particle.FireworkParticles$1.binpatch
-    Checksum: 7c491ac5 Exists: true
-  Reading patch net.minecraft.client.particle.FireworkParticles$FlashProvider.binpatch
-    Checksum: 50e938f3 Exists: true
-  Reading patch net.minecraft.client.particle.FireworkParticles$OverlayParticle.binpatch
-    Checksum: 2d4ac99 Exists: true
-  Reading patch net.minecraft.client.particle.FireworkParticles$SparkParticle.binpatch
-    Checksum: 7face5ba Exists: true
-  Reading patch net.minecraft.client.particle.FireworkParticles$SparkProvider.binpatch
-    Checksum: ccf49191 Exists: true
-  Reading patch net.minecraft.client.particle.FireworkParticles$Starter.binpatch
-    Checksum: ba84202c Exists: true
-  Reading patch net.minecraft.client.particle.FireworkParticles.binpatch
-    Checksum: 6231311e Exists: true
   Reading patch net.minecraft.client.particle.Particle.binpatch
     Checksum: 49461123 Exists: true
   Reading patch net.minecraft.client.particle.ParticleEngine$1ParticleDefinition.binpatch
@@ -1457,8 +1435,6 @@ Loading patches file: C:\Users\maxba\.gradle\caches\forge_gradle\minecraft_user_
     Checksum: c98abf83 Exists: true
   Reading patch net.minecraft.tags.TagEntry.binpatch
     Checksum: 7070dec2 Exists: true
-  Reading patch net.minecraft.tags.TagFile.binpatch
-    Checksum: ba01a2a6 Exists: true
   Reading patch net.minecraft.tags.TagLoader$1.binpatch
     Checksum: aef1b685 Exists: true
   Reading patch net.minecraft.tags.TagLoader$EntryWithSource.binpatch
@@ -1535,14 +1511,6 @@ Loading patches file: C:\Users\maxba\.gradle\caches\forge_gradle\minecraft_user_
     Checksum: 66f85384 Exists: true
   Reading patch net.minecraft.world.entity.TamableAnimal.binpatch
     Checksum: 81d387e7 Exists: true
-  Reading patch net.minecraft.world.entity.ai.Brain$1.binpatch
-    Checksum: 99f3604c Exists: true
-  Reading patch net.minecraft.world.entity.ai.Brain$MemoryValue.binpatch
-    Checksum: 8442dcee Exists: true
-  Reading patch net.minecraft.world.entity.ai.Brain$Provider.binpatch
-    Checksum: 4077211f Exists: true
-  Reading patch net.minecraft.world.entity.ai.Brain.binpatch
-    Checksum: c6fac287 Exists: true
   Reading patch net.minecraft.world.entity.ai.attributes.AttributeSupplier$Builder.binpatch
     Checksum: 51df5b04 Exists: true
   Reading patch net.minecraft.world.entity.ai.attributes.AttributeSupplier.binpatch
@@ -2095,12 +2063,6 @@ Loading patches file: C:\Users\maxba\.gradle\caches\forge_gradle\minecraft_user_
     Checksum: a1c2c76d Exists: true
   Reading patch net.minecraft.world.item.ElytraItem.binpatch
     Checksum: 88da0826 Exists: true
-  Reading patch net.minecraft.world.item.FireworkRocketItem$Shape.binpatch
-    Checksum: 4c033c46 Exists: true
-  Reading patch net.minecraft.world.item.FireworkRocketItem.binpatch
-    Checksum: bf919d2c Exists: true
-  Reading patch net.minecraft.world.item.FireworkStarItem.binpatch
-    Checksum: 55165bf9 Exists: true
   Reading patch net.minecraft.world.item.FishingRodItem.binpatch
     Checksum: 4e9635ab Exists: true
   Reading patch net.minecraft.world.item.HoeItem.binpatch
@@ -2169,8 +2131,6 @@ Loading patches file: C:\Users\maxba\.gradle\caches\forge_gradle\minecraft_user_
     Checksum: ffbf8768 Exists: true
   Reading patch net.minecraft.world.item.crafting.BookCloningRecipe.binpatch
     Checksum: 7e23cab6 Exists: true
-  Reading patch net.minecraft.world.item.crafting.FireworkStarRecipe.binpatch
-    Checksum: 650a3f10 Exists: true
   Reading patch net.minecraft.world.item.crafting.Ingredient$ItemValue.binpatch
     Checksum: 646fbdf4 Exists: true
   Reading patch net.minecraft.world.item.crafting.Ingredient$TagValue.binpatch
@@ -2667,8 +2627,6 @@ Loading patches file: C:\Users\maxba\.gradle\caches\forge_gradle\minecraft_user_
     Checksum: fe0a954d Exists: true
   Reading patch net.minecraft.world.level.levelgen.DebugLevelSource.binpatch
     Checksum: 104b53e9 Exists: true
-  Reading patch net.minecraft.world.level.levelgen.PhantomSpawner.binpatch
-    Checksum: caa3fb97 Exists: true
   Reading patch net.minecraft.world.level.levelgen.feature.Feature.binpatch
     Checksum: f77ac98a Exists: true
   Reading patch net.minecraft.world.level.levelgen.feature.MonsterRoomFeature.binpatch
@@ -2677,8 +2635,6 @@ Loading patches file: C:\Users\maxba\.gradle\caches\forge_gradle\minecraft_user_
     Checksum: ed8e5c47 Exists: true
   Reading patch net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration.binpatch
     Checksum: bc563b01 Exists: true
-  Reading patch net.minecraft.world.level.levelgen.feature.treedecorators.AlterGroundDecorator.binpatch
-    Checksum: 19c1b076 Exists: true
   Reading patch net.minecraft.world.level.levelgen.feature.trunkplacers.TrunkPlacer.binpatch
     Checksum: ed91de4a Exists: true
   Reading patch net.minecraft.world.level.levelgen.structure.Structure$GenerationContext.binpatch
@@ -2866,7 +2822,6 @@ Processing: C:\Users\maxba\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\jo
   Patching com/mojang/blaze3d/vertex/BufferBuilder 1/1
   Patching com/mojang/blaze3d/vertex/PoseStack$Pose 1/1
   Patching com/mojang/blaze3d/vertex/PoseStack 1/1
-  Patching com/mojang/blaze3d/vertex/SheetedDecalTextureGenerator 1/1
   Patching com/mojang/blaze3d/vertex/VertexConsumer 1/1
   Patching com/mojang/blaze3d/vertex/VertexFormat$1 1/1
   Patching com/mojang/blaze3d/vertex/VertexFormat$IndexType 1/1
@@ -2967,14 +2922,11 @@ Processing: C:\Users\maxba\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\jo
   Patching net/minecraft/client/gui/components/toasts/ToastComponent 1/1
   Patching net/minecraft/client/gui/screens/ChatScreen$1 1/1
   Patching net/minecraft/client/gui/screens/ChatScreen 1/1
-  Patching net/minecraft/client/gui/screens/ConnectScreen$1 1/1
-  Patching net/minecraft/client/gui/screens/ConnectScreen 1/1
   Patching net/minecraft/client/gui/screens/LoadingOverlay$LogoTexture 1/1
   Patching net/minecraft/client/gui/screens/LoadingOverlay 1/1
   Patching net/minecraft/client/gui/screens/MenuScreens$ScreenConstructor 1/1
   Patching net/minecraft/client/gui/screens/MenuScreens 1/1
   Patching net/minecraft/client/gui/screens/OptionsScreen 1/1
-  Patching net/minecraft/client/gui/screens/PauseScreen 1/1
   Patching net/minecraft/client/gui/screens/Screen$DeferredTooltipRendering 1/1
   Patching net/minecraft/client/gui/screens/Screen$NarratableSearchResult 1/1
   Patching net/minecraft/client/gui/screens/Screen 1/1
@@ -3076,13 +3028,6 @@ Processing: C:\Users\maxba\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\jo
   Patching net/minecraft/client/particle/EnchantmentTableParticle$NautilusProvider 1/1
   Patching net/minecraft/client/particle/EnchantmentTableParticle$Provider 1/1
   Patching net/minecraft/client/particle/EnchantmentTableParticle 1/1
-  Patching net/minecraft/client/particle/FireworkParticles$1 1/1
-  Patching net/minecraft/client/particle/FireworkParticles$FlashProvider 1/1
-  Patching net/minecraft/client/particle/FireworkParticles$OverlayParticle 1/1
-  Patching net/minecraft/client/particle/FireworkParticles$SparkParticle 1/1
-  Patching net/minecraft/client/particle/FireworkParticles$SparkProvider 1/1
-  Patching net/minecraft/client/particle/FireworkParticles$Starter 1/1
-  Patching net/minecraft/client/particle/FireworkParticles 1/1
   Patching net/minecraft/client/particle/Particle 1/1
   Patching net/minecraft/client/particle/ParticleEngine$1ParticleDefinition 1/1
   Patching net/minecraft/client/particle/ParticleEngine$MutableSpriteSet 1/1
@@ -3560,7 +3505,6 @@ Processing: C:\Users\maxba\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\jo
   Patching net/minecraft/tags/TagBuilder 1/1
   Patching net/minecraft/tags/TagEntry$Lookup 1/1
   Patching net/minecraft/tags/TagEntry 1/1
-  Patching net/minecraft/tags/TagFile 1/1
   Patching net/minecraft/tags/TagLoader$1 1/1
   Patching net/minecraft/tags/TagLoader$EntryWithSource 1/1
   Patching net/minecraft/tags/TagLoader$SortingEntry 1/1
@@ -3599,10 +3543,6 @@ Processing: C:\Users\maxba\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\jo
   Patching net/minecraft/world/entity/SpawnPlacements$Type 1/1
   Patching net/minecraft/world/entity/SpawnPlacements 1/1
   Patching net/minecraft/world/entity/TamableAnimal 1/1
-  Patching net/minecraft/world/entity/ai/Brain$1 1/1
-  Patching net/minecraft/world/entity/ai/Brain$MemoryValue 1/1
-  Patching net/minecraft/world/entity/ai/Brain$Provider 1/1
-  Patching net/minecraft/world/entity/ai/Brain 1/1
   Patching net/minecraft/world/entity/ai/attributes/AttributeSupplier$Builder 1/1
   Patching net/minecraft/world/entity/ai/attributes/AttributeSupplier 1/1
   Patching net/minecraft/world/entity/ai/attributes/DefaultAttributes 1/1
@@ -3879,9 +3819,6 @@ Processing: C:\Users\maxba\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\jo
   Patching net/minecraft/world/item/DyeColor 1/1
   Patching net/minecraft/world/item/DyeableHorseArmorItem 1/1
   Patching net/minecraft/world/item/ElytraItem 1/1
-  Patching net/minecraft/world/item/FireworkRocketItem$Shape 1/1
-  Patching net/minecraft/world/item/FireworkRocketItem 1/1
-  Patching net/minecraft/world/item/FireworkStarItem 1/1
   Patching net/minecraft/world/item/FishingRodItem 1/1
   Patching net/minecraft/world/item/HoeItem 1/1
   Patching net/minecraft/world/item/HorseArmorItem 1/1
@@ -3915,7 +3852,6 @@ Processing: C:\Users\maxba\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\jo
   Patching net/minecraft/world/item/alchemy/PotionBrewing 1/1
   Patching net/minecraft/world/item/crafting/BannerDuplicateRecipe 1/1
   Patching net/minecraft/world/item/crafting/BookCloningRecipe 1/1
-  Patching net/minecraft/world/item/crafting/FireworkStarRecipe 1/1
   Patching net/minecraft/world/item/crafting/Ingredient$ItemValue 1/1
   Patching net/minecraft/world/item/crafting/Ingredient$TagValue 1/1
   Patching net/minecraft/world/item/crafting/Ingredient$Value 1/1
@@ -4162,12 +4098,10 @@ Processing: C:\Users\maxba\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\jo
   Patching net/minecraft/world/level/levelgen/Beardifier$Rigid 1/1
   Patching net/minecraft/world/level/levelgen/Beardifier 1/1
   Patching net/minecraft/world/level/levelgen/DebugLevelSource 1/1
-  Patching net/minecraft/world/level/levelgen/PhantomSpawner 1/1
   Patching net/minecraft/world/level/levelgen/feature/Feature 1/1
   Patching net/minecraft/world/level/levelgen/feature/MonsterRoomFeature 1/1
   Patching net/minecraft/world/level/levelgen/feature/configurations/TreeConfiguration$TreeConfigurationBuilder 1/1
   Patching net/minecraft/world/level/levelgen/feature/configurations/TreeConfiguration 1/1
-  Patching net/minecraft/world/level/levelgen/feature/treedecorators/AlterGroundDecorator 1/1
   Patching net/minecraft/world/level/levelgen/feature/trunkplacers/TrunkPlacer 1/1
   Patching net/minecraft/world/level/levelgen/structure/Structure$GenerationContext 1/1
   Patching net/minecraft/world/level/levelgen/structure/Structure$GenerationStub 1/1

@@ -4,7 +4,7 @@
     {
       "conditions": [
         {
-          "item": "outer_end:azure_bookshelf",
+          "item": "quark:oak_vertical_slab",
           "type": "forge:item_exists"
         }
       ],

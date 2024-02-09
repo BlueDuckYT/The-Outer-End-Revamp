@@ -1,14 +1,18 @@
 package blueduck.outer_end.entity;
 
+import blueduck.outer_end.registry.OuterEndBlocks;
 import blueduck.outer_end.registry.OuterEndEntities;
 import blueduck.outer_end.registry.OuterEndItems;
+import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.RandomSource;
 import net.minecraft.util.TimeUtil;
 import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.Difficulty;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
@@ -16,18 +20,22 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.animal.Sheep;
+import net.minecraft.world.entity.monster.Enemy;
+import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.BlockAndTintGetter;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.ServerLevelAccessor;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.UUID;
 
-public class Stalker extends Animal implements NeutralMob {
+public class Stalker extends Animal implements Enemy, NeutralMob {
 
 
     private static final UniformInt PERSISTENT_ANGER_TIME = TimeUtil.rangeOfSeconds(20, 39);
@@ -46,7 +54,7 @@ public class Stalker extends Animal implements NeutralMob {
         this.goalSelector.addGoal(0, new FloatGoal(this));
         this.goalSelector.addGoal(1, new PanicGoal(this, 2.0D));
         this.goalSelector.addGoal(2, new BreedGoal(this, 1.0D));
-        this.goalSelector.addGoal(3, new TemptGoal(this, 1.25D, Ingredient.of(OuterEndItems.AZURE_BERRIES.get()), false));
+        this.goalSelector.addGoal(3, new TemptGoal(this, 1.25D, Ingredient.of(Items.CHORUS_FRUIT), false));
         this.goalSelector.addGoal(4, new FollowParentGoal(this, 1.25D));
         this.goalSelector.addGoal(5, new WaterAvoidingRandomStrollGoal(this, 1.0D));
         this.goalSelector.addGoal(6, new LookAtPlayerGoal(this, Player.class, 6.0F));
@@ -61,7 +69,7 @@ public class Stalker extends Animal implements NeutralMob {
         String col = new String[]{"rose","mint","cobalt"}[random.nextInt(3)];
         this.setColor(col);
 //        p_29839_.putString("color", col);
-        return super.finalizeSpawn(p_29835_, p_29836_, p_29837_, p_29838_, p_29839_);
+        return super.finalizeSpawn(p_29835_, p_29836_, p_29837_, new AgeableMob.AgeableMobGroupData(true), p_29839_);
     }
     protected void defineSynchedData() {
         super.defineSynchedData();
@@ -122,6 +130,21 @@ public class Stalker extends Animal implements NeutralMob {
     }
 
     public boolean isFood(ItemStack p_27600_) {
-        return p_27600_.is(OuterEndItems.AZURE_BERRIES.get());
+        return p_27600_.is(Items.CHORUS_FRUIT);
+    }
+
+    public static boolean canSpawn(EntityType<Stalker> entityType, ServerLevelAccessor level, MobSpawnType type, BlockPos pos, RandomSource rand) {
+        BlockPos blockpos = pos.below();
+        return level.getBlockState(blockpos).is(OuterEndBlocks.VIOLITE.get());
+
+    }
+
+    public static boolean checkAnyLightMonsterSpawnRules(EntityType<? extends Stalker> p_219020_, LevelAccessor p_219021_, MobSpawnType p_219022_, BlockPos p_219023_, RandomSource p_219024_) {
+        return p_219021_.getDifficulty() != Difficulty.PEACEFUL && checkMobSpawnRules(p_219020_, p_219021_, p_219022_, p_219023_, p_219024_);
+    }
+
+
+    public static boolean isBrightEnoughToSpawn(BlockAndTintGetter p_186210_, BlockPos p_186211_) {
+        return p_186210_.getRawBrightness(p_186211_, 0) > 1;
     }
 }

@@ -1,8 +1,21 @@
 {
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "outer_end:violite_bricks"
-  },
-  "result": "outer_end:violite_brick_vertical_slab",
-  "count": 2
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "item": "quark:oak_vertical_slab",
+          "type": "forge:item_exists"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:stonecutting",
+        "ingredient": {
+          "item": "outer_end:violite_bricks"
+        },
+        "result": "outer_end:violite_brick_vertical_slab",
+        "count": 2
+      }
+    }
+  ]
 }

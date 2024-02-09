@@ -24,6 +24,15 @@ public class OuterEndSounds {
     public static final RegistryObject<SoundEvent> BLOCK_VIOLITE_HIT = SOUNDS.register("block.outer_end.violite.hit", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("outer_end", "block.outer_end.violite.hit")));
     public static final RegistryObject<SoundEvent> BLOCK_VIOLITE_FALL = SOUNDS.register("block.outer_end.violite.fall", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("outer_end", "block.outer_end.violite.fall")));
 
+    public static final RegistryObject<SoundEvent> ENTITY_HIMMELITE_IDLE = SOUNDS.register("entity.outer_end.himmelite.idle", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("outer_end", "entity.outer_end.himmelite.idle")));
+    public static final RegistryObject<SoundEvent> ENTITY_HIMMELITE_HURT = SOUNDS.register("entity.outer_end.himmelite.hurt", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("outer_end", "entity.outer_end.himmelite.hurt")));
+    public static final RegistryObject<SoundEvent> ENTITY_HIMMELITE_DEATH = SOUNDS.register("entity.outer_end.himmelite.death", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("outer_end", "entity.outer_end.himmelite.death")));
+
+    public static final RegistryObject<SoundEvent> ENTITY_ENTOMBED_IDLE = SOUNDS.register("entity.outer_end.entombed.idle", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("outer_end", "entity.outer_end.entombed.idle")));
+    public static final RegistryObject<SoundEvent> ENTITY_ENTOMBED_HURT = SOUNDS.register("entity.outer_end.entombed.hurt", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("outer_end", "entity.outer_end.entombed.hurt")));
+    public static final RegistryObject<SoundEvent> ENTITY_ENTOMBED_DEATH = SOUNDS.register("entity.outer_end.entombed.death", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("outer_end", "entity.outer_end.entombed.death")));
+
+
     public static final SoundType VIOLITE_SOUND = new SoundType(1.0F, 1.5F,
             SoundEvent.createVariableRangeEvent(new ResourceLocation("outer_end", "block.outer_end.violite.break")),
             SoundEvent.createVariableRangeEvent(new ResourceLocation("outer_end", "block.outer_end.violite.step")),

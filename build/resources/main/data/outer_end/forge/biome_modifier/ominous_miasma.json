@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#is_end",
+  "features": ["outer_end:ominous_miasma", "outer_end:large_ominous_miasma"],
+  "step": "local_modifications"
+}

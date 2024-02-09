@@ -189,6 +189,11 @@
           "type": "minecraft:item",
           "weight": 3,
           "name": "minecraft:skeleton_skull"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 4,
+          "name": "outer_end:chests/crystal_upgrade_templates"
         }
       ]
     }

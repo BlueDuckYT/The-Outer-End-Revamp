@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "outer_end:brine"
+          "name": "outer_end:halite_crystal"
         }
       ],
       "conditions": [

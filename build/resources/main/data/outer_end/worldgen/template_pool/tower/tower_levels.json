@@ -22,7 +22,7 @@
       }
     },
     {
-      "weight": 35,
+      "weight": 50,
       "element": {
         "location": "outer_end:tower/levels/level_2",
         "processors": "minecraft:empty",
@@ -58,9 +58,18 @@
       }
     },
     {
-      "weight": 50,
+      "weight": 30,
       "element": {
         "location": "outer_end:tower/levels/top_level",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 30,
+      "element": {
+        "location": "outer_end:tower/levels/top_level_shulkers",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"

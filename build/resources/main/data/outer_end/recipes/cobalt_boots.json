@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "outer_end:cobalt_crystal_shard"
+  },
+  "base": {
+    "item": "minecraft:diamond_boots"
+  },
+  "result": {
+    "item": "outer_end:cobalt_crystal_boots"
+  },
+  "template": {
+    "item": "outer_end:cobalt_upgrade_template"
+  }
+}
