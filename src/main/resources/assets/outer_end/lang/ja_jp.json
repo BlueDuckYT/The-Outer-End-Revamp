@@ -1,16 +1,16 @@
 {
   "block.outer_end.azure_stem": "紺碧の幹",
   "block.outer_end.azure_pith": "紺碧の木",
-  "block.outer_end.azure_stripped_stem": "樹皮を剥いだ紺碧の幹",
-  "block.outer_end.azure_stripped_pith": "樹皮を剥いだ紺碧の木",
+  "block.outer_end.azure_stripped_stem": "樹皮を剝いだ紺碧の幹",
+  "block.outer_end.azure_stripped_pith": "樹皮を剝いだ紺碧の木",
   "block.outer_end.azure_planks": "紺碧の板材",
-  "block.outer_end.azure_leaves": "紺碧の花びらブロック",
-  "block.outer_end.azure_stamen": "紺碧のおしべブロック",
+  "block.outer_end.azure_leaves": "紺碧の花びら",
+  "block.outer_end.azure_stamen": "紺碧のおしべ",
   "block.outer_end.azure_bud": "紺碧の芽",
   "block.outer_end.azure_grass": "紺碧の草ブロック",
   "block.outer_end.ender_roots": "エンダーの根",
   "block.outer_end.tall_ender_roots": "背の高いエンダーの根",
-  "block.outer_end.azure_sprouts": "紺碧の萌芽",
+  "block.outer_end.azure_sprouts": "アズールスプラウト",
   "block.outer_end.azure_vines": "紺碧のツタ",
   "block.outer_end.azure_fence": "紺碧のフェンス",
   "block.outer_end.azure_fence_gate": "紺碧のフェンスゲート",
@@ -21,19 +21,22 @@
   "block.outer_end.azure_slab": "紺碧のハーフブロック",
   "block.outer_end.azure_stairs": "紺碧の階段",
   "block.outer_end.azure_sign": "紺碧の看板",
+  "block.outer_end.azure_hanging_sign": "紺碧の吊り看板",
   "block.outer_end.azure_berry_vine": "アズールベリーの茎",
   "block.outer_end.azure_berry_vine_top": "アズールベリーの茎頂部",
   "block.outer_end.potted_azure_bud": "植えられた紺碧の芽",
   "block.outer_end.potted_ender_roots": "植えられたエンダーの根",
-  "block.outer_end.potted_azure_sprouts": "植えられた紺碧の萌芽",
+  "block.outer_end.potted_azure_sprouts": "植えられたアズールスプラウト",
 
   "block.outer_end.azure_vertical_slab": "紺碧の縦ハーフブロック",
   "block.outer_end.azure_vertical_planks": "紺碧の縦板材",
   "block.outer_end.azure_ladder": "紺碧のはしご",
   "block.outer_end.azure_bookshelf": "紺碧の本棚",
-  "block.outer_end.azure_beehive": "紺碧のミツバチの巣",
+  "block.outer_end.azure_beehive": "紺碧の養蜂箱",
   "block.outer_end.azure_chest": "紺碧のチェスト",
   "block.outer_end.azure_trapped_chest": "紺碧のトラップチェスト",
+  "block.outer_end.azure_post": "紺碧の杭",
+  "block.outer_end.stripped_azure_post": "樹皮を剝いだ紺碧の杭",
 
   "block.outer_end.himmel_block": "ヒンメルブロック",
   "block.outer_end.himmel_pillar": "ヒンメルの柱",
@@ -83,9 +86,10 @@
   "block.outer_end.mint_crystal": "ミント水晶",
   "block.outer_end.cobalt_crystal": "コバルト水晶",
 
-  "block.outer_end.rose_crystal_bud": "未熟なローズ水晶",
-  "block.outer_end.mint_crystal_bud": "未熟なミント水晶",
-  "block.outer_end.cobalt_crystal_bud": "未熟なコバルト水晶",
+
+  "block.outer_end.rose_crystal_bud": "ローズ水晶の芽",
+  "block.outer_end.mint_crystal_bud": "ミント水晶の芽",
+  "block.outer_end.cobalt_crystal_bud": "コバルト水晶の芽",
 
 
   "block.outer_end.rose_crystal_lamp": "ローズ水晶のランプ",
@@ -110,15 +114,63 @@
   "block.outer_end.cobalt_roots": "コバルト水晶の根",
 
   "item.outer_end.azure_berries": "アズールベリー",
+  "item.outer_end.rose_crystalline_berries": "ローズベリー",
+  "item.outer_end.mint_crystalline_berries": "ミントベリー",
+  "item.outer_end.cobalt_crystalline_berries": "コバルトベリー",
+  "item.outer_end.rose_crystal_arrow": "ローズ水晶の矢",
+  "item.outer_end.mint_crystal_arrow": "ミント水晶の矢",
+  "item.outer_end.cobalt_crystal_arrow": "コバルト水晶の矢",
   "item.outer_end.floral_paste": "花の粘土",
   "item.outer_end.spectragel": "スペクトラゲル",
   "item.outer_end.stalker_meat": "ストーカーの肉",
   "item.outer_end.cooked_stalker_meat": "ストーカーのステーキ",
+  "item.outer_end.brine_bucket": "ブライン入りバケツ",
+  "item.outer_end.ominous_miasma_bucket": "邪気入りバケツ",
   "item.outer_end.azure_boat": "紺碧のボート",
+  "item.outer_end.azure_chest_boat": "チェスト付きの紺碧のボート",
+  "item.outer_end.halite_crystal": "岩塩の欠片",
+  "item.outer_end.cured_chorus_fruit": "浄化されたコーラスフルーツ",
+  "item.outer_end.cured_jerky": "浄化された肉",
 
-  "item.outer_end.rose_crystal_shard": "ローズ水晶の破片",
-  "item.outer_end.mint_crystal_shard": "ミント水晶の破片",
-  "item.outer_end.cobalt_crystal_shard": "コバルト水晶の破片",
+  "item.outer_end.rose_crystal_shard": "ローズ水晶の欠片",
+  "item.outer_end.mint_crystal_shard": "ミント水晶の欠片",
+  "item.outer_end.cobalt_crystal_shard": "コバルト水晶の欠片",
+
+  "item.outer_end.rose_upgrade_template": "鍛冶型",
+  "item.outer_end.mint_upgrade_template": "鍛冶型",
+  "item.outer_end.cobalt_upgrade_template": "鍛冶型",
+
+  "item.outer_end.smithing_template.rose_crystal_upgrade.ingredients": "ローズ水晶の欠片",
+  "item.outer_end.smithing_template.mint_crystal_upgrade.ingredients": "ミント水晶の欠片",
+  "item.outer_end.smithing_template.cobalt_crystal_upgrade.ingredients": "コバルト水晶の欠片",
+
+  "upgrade.outer_end.rose_crystal_upgrade": "ローズ水晶強化",
+  "upgrade.outer_end.mint_crystal_upgrade": "ミント水晶強化",
+  "upgrade.outer_end.cobalt_crystal_upgrade": "コバルト水晶強化",
+
+  "item.minecraft.smithing_template.crystal_upgrade.base_slot_description": "ダイヤモンド製の防具を置いてください",
+  "item.minecraft.smithing_template.crystal_upgrade.additions_slot_description": "水晶を置いてください",
+
+  "item.outer_end.rose_crystal_helmet": "ローズ水晶のヘルメット",
+  "item.outer_end.rose_crystal_chestplate": "ローズ水晶のチェストプレート",
+  "item.outer_end.rose_crystal_leggings": "ローズ水晶のレギンス",
+  "item.outer_end.rose_crystal_boots": "ローズ水晶のブーツ",
+
+  "item.outer_end.mint_crystal_helmet": "ミント水晶のヘルメット",
+  "item.outer_end.mint_crystal_chestplate": "ミント水晶のチェストプレート",
+  "item.outer_end.mint_crystal_leggings": "ミント水晶のレギンス",
+  "item.outer_end.mint_crystal_boots": "ミント水晶のブーツ",
+
+  "item.outer_end.cobalt_crystal_helmet": "コバルト水晶のヘルメット",
+  "item.outer_end.cobalt_crystal_chestplate": "コバルト水晶のチェストプレート",
+  "item.outer_end.cobalt_crystal_leggings": "コバルト水晶のレギンス",
+  "item.outer_end.cobalt_crystal_boots": "コバルト水晶のブーツ",
+
+  "item.outer_end.levitation_core": "重空の核",
+  "item.outer_end.sinker_tooth": "シンカーの歯",
+  "item.outer_end.sinker_shuriken": "シンカー手裏剣",
+  "item.outer_end.sinker_dagger": "シンカーダガー",
+  "item.outer_end.shulker_shield": "シュルカーの盾",
 
   "item.outer_end.music_disc_galactic_wave": "レコード",
   "item.outer_end.music_disc_galactic_wave.desc": "Blue Duck - Galactic Wave",
@@ -129,20 +181,26 @@
 
   "item.outer_end.spectrafly_spawn_egg": "スペクトラフライのスポーンエッグ",
   "item.outer_end.himmelite_spawn_egg": "ヒンメライトのスポーンエッグ",
-  "item.outer_end.purpur_golem_spawn_egg": "パーピュアゴーレムのスポーンエッグ",
+  "item.outer_end.purpur_golem_spawn_egg": "プルプァゴーレムのスポーンエッグ",
   "item.outer_end.stalker_spawn_egg": "ストーカーのスポーンエッグ",
   "item.outer_end.entombed_spawn_egg": "エントゥームドのスポーンエッグ",
-  "item.outer_end.chorus_squid_spawn_egg": "コーラススクイッドのスポーンエッグ",
+  "item.outer_end.sinker_spawn_egg": "シンカーのスポーンエッグ",
 
   "entity.outer_end.spectrafly": "スペクトラフライ",
   "entity.outer_end.himmelite": "ヒンメライト",
-  "entity.outer_end.purpur_golem": "パーピュアゴーレム",
+  "entity.outer_end.purpur_golem": "プルプァゴーレム",
   "entity.outer_end.stalker": "ストーカー",
   "entity.outer_end.entombed": "エントゥームド",
-  "entity.outer_end.chorus_squid": "コーラススクイッド",
+  "entity.outer_end.sinker": "シンカー",
+  "entity.outer_end.sinker_shuriken": "シンカー手裏剣",
+  "entity.outer_end.sinker_laser": "シンカーレーザー",
+  "entity.outer_end.rose_crystal_arrow": "ローズ水晶の矢",
+  "entity.outer_end.mint_crystal_arrow": "ミント水晶の矢",
+  "entity.outer_end.cobalt_crystal_arrow": "コバルト水晶の矢",
 
   "biome.outer_end.azure_forest": "紺碧の森",
   "biome.outer_end.crystal_crag": "水晶の山岳",
+  "biome.outer_end.primordial_pools": "古代の泉",
 
   "advancements.end.find_end_tower.title": "集合大都市",
   "advancements.end.find_end_tower.description": "エンドタワーに入る",
@@ -151,6 +209,8 @@
   "advancements.end.find_catacombs.description": "地下墓地を見つける",
   
   "advancements.end.explore_end.title": "虚空を超えて",
-  "advancements.end.explore_end.description": "エンドのバイオームをすべて探索する"
+  "advancements.end.explore_end.description": "エンドのバイオームをすべて探索する",
+
+  "itemGroup.outer_end": "The Outer End"
 
 }
