@@ -3,8 +3,10 @@ package blueduck.outer_end.entity;
 import blueduck.outer_end.registry.OuterEndSounds;
 import net.minecraft.commands.arguments.EntityAnchorArgument;
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.syncher.EntityDataAccessor;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
@@ -17,7 +19,6 @@ import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
-import net.minecraft.world.entity.ai.navigation.GroundPathNavigation;
 import net.minecraft.world.entity.animal.IronGolem;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
@@ -27,10 +28,11 @@ import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.pathfinder.Path;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.phys.Vec3;
-import org.joml.Vector3d;
 
 public class Himmelite extends Monster {
-
+    private static final EntityDataAccessor<Integer> BITE_FACTOR = SynchedEntityData.defineId(Himmelite.class, EntityDataSerializers.INT);
+    private int lastBiteFactor = 0;
+    private boolean updateLastFactor = false;
 
     public Himmelite(EntityType<? extends Monster> p_33002_, Level p_33003_) {
         super(p_33002_, p_33003_);
@@ -66,6 +68,34 @@ public class Himmelite extends Monster {
         return checkMobSpawnRules(entityType, level, type, pos, rand);
     }
 
+    // synced data
+    @Override
+    protected void defineSynchedData() {
+        super.defineSynchedData();
+        this.entityData.define(BITE_FACTOR, 0);
+    }
+
+    // === BITE DATA ===
+    public void setBiteFactor(int amt) {
+        this.entityData.set(BITE_FACTOR, amt);
+    }
+
+    public void incrementBiteFactor(int amt) {
+        this.entityData.set(BITE_FACTOR, getBiteFactor() + amt);
+    }
+
+    public int getBiteFactor() {
+        return this.entityData.get(BITE_FACTOR);
+    }
+
+    public int getLastBiteFactor() {
+        return lastBiteFactor;
+    }
+
+    public void updateBiteFactor() {
+        updateLastFactor = true;
+    }
+
     public SoundEvent getAmbientSound() {
         return OuterEndSounds.ENTITY_HIMMELITE_IDLE.get();
     }
@@ -78,8 +108,35 @@ public class Himmelite extends Monster {
         return OuterEndSounds.ENTITY_HIMMELITE_DEATH.get();
     }
 
+    @Override
+    public void baseTick() {
+        super.baseTick();
+
+        if (this.isNoAi() || this.level().isClientSide) {
+            if (this.level().isClientSide) {
+                if (this.updateLastFactor || getBiteFactor() == 0) {
+                    lastBiteFactor = getBiteFactor();
+                    updateLastFactor = false;
+                }
+            }
+            return;
+        }
+
+        LivingEntity target = this.getTarget();
+        if (target != null && !retreating) {
+            if (this.getBiteFactor() >= 17)
+                this.setBiteFactor(0);
+            if (this.distanceTo(target) <= 10 && this.getBiteFactor() != 16)
+                incrementBiteFactor(1);
+            else if (this.distanceTo(target) >= 10) setBiteFactor(0);
+        } else {
+            setBiteFactor(-1);
+        }
+    }
+
     class HimmeliteRetreatGoal extends Goal {
         PathfinderMob mob;
+        int ticksSinceLastCheck = 5;
 
         public HimmeliteRetreatGoal(PathfinderMob mob) {
             this.mob = mob;
@@ -96,6 +153,7 @@ public class Himmelite extends Monster {
         }
 
         Path path;
+        BlockPos target;
 
         @Override
         public void start() {
@@ -111,7 +169,8 @@ public class Himmelite extends Monster {
                     Mth.floor(targ.x),
                     Mth.floor(targ.z)
             );
-            this.path = this.mob.getNavigation().createPath(BlockPos.containing(targ.x, y, targ.z), 1);
+            this.target = BlockPos.containing(targ.x, y, targ.z);
+            this.path = this.mob.getNavigation().createPath(target, 1);
             if (path != null)
                 this.mob.getNavigation().moveTo(path, 1.0);
             else {
@@ -122,18 +181,16 @@ public class Himmelite extends Monster {
         @Override
         public void tick() {
             // TODO: every x ticks, double check path
-//            if (this.mob.getNavigation().getPath() == null) {
-//                this.mob.getNavigation().moveTo(path, 1.0);
-//            }
+            if ((ticksSinceLastCheck--) < 0) {
+                Path pth = this.mob.getNavigation().createPath(target, 1);
+                ;
+                if (pth != null)
+                    this.path = pth;
+                ticksSinceLastCheck = 5;
+            }
+
             this.mob.getNavigation().moveTo(path, 1.0);
-//            if (
-//                    this.path.getNextNodePos().distSqr(
-//                            this.mob.position()
-//                    ) > 1
-//            ) {
-//                this.path = this.mob.getNavigation().createPath(BlockPos.containing(targ.x, targ.y, targ.z), 1);
-//                this.mob.getNavigation().moveTo(path, 1.0);
-//            }
+
             if (
                     path == null ||
                             path.isDone() ||
@@ -175,6 +232,13 @@ public class Himmelite extends Monster {
                 if (canContinueToUse()) {
                     LivingEntity target = this.mob.getTarget();
                     this.path = this.mob.getNavigation().createPath(target, 0);
+
+                    if (this.mob.distanceTo(target) <= 2) {
+                        if (getBiteFactor() == 16) {
+                            setBiteFactor(17);
+                            retreating = true;
+                        }
+                    }
                 }
             }
         }
