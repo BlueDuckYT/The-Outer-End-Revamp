@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "outer_end:violite_tiles"
-  },
-  "result": "outer_end:cracked_violite_tiles",
-  "experience": 0.35,
-  "cookingtime": 200
-}

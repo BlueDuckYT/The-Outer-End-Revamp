@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "outer_end:block/tall_ender_roots_bottom"
-  }
-}

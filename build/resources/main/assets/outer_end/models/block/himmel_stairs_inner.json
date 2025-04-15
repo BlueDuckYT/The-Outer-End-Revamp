@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "outer_end:block/himmel",
-    "top": "outer_end:block/himmel",
-    "side": "outer_end:block/himmel"
-  }
-}

@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "outer_end:himmel_block"
-  },
-  "result": "outer_end:himmel_pillar",
-  "count": 1
-}

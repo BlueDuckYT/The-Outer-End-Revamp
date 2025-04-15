@@ -1,8 +1,0 @@
-{
-  "parent": "outer_end:block/vertical_slab",
-  "textures": {
-    "bottom": "outer_end:block/himmel",
-    "top": "outer_end:block/himmel",
-    "side": "outer_end:block/himmel"
-  }
-}

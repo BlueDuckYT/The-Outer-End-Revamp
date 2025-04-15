@@ -1,8 +1,0 @@
-{
-  "parent": "outer_end:block/vertical_slab",
-  "textures": {
-    "bottom": "outer_end:block/violite",
-    "top": "outer_end:block/violite",
-    "side": "outer_end:block/violite"
-  }
-}

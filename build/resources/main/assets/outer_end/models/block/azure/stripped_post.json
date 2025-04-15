@@ -1,6 +1,0 @@
-{
-  "parent": "quark:block/post",
-  "textures": {
-    "texture": "outer_end:block/azure_stripped_stem_side"
-  }
-}

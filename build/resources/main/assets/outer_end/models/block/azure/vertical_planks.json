@@ -1,6 +1,0 @@
-{
-  "parent": "blueprint:block/vertical_planks",
-  "textures": {
-    "all": "outer_end:block/azure_planks"
-  }
-}

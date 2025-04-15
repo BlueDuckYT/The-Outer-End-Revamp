@@ -1,7 +1,0 @@
-Java Launcher: C:\Users\maxba\.jdks\corretto-17.0.5\bin\java.exe
-Arguments: '--inJar, C:\Users\maxba\IdeaProjects\The-Outer-End-Revamp\build\fg_cache\net\minecraftforge\forge\1.20.1-47.0.46\forge-1.20.1-47.0.46-injected.jar, --outJar, C:\Users\maxba\IdeaProjects\The-Outer-End-Revamp\build\fg_cache\net\minecraftforge\forge\1.20.1-47.0.46_mapped_official_1.20.1\forge-1.20.1-47.0.46_mapped_official_1.20.1.jar, --logFile, accesstransform.log, --atFile, C:\Users\maxba\IdeaProjects\The-Outer-End-Revamp\src\main\resources\META-INF\accesstransformer.cfg, --atFile, C:\Users\maxba\IdeaProjects\The-Outer-End-Revamp\build\_atJar_4\parent_at.cfg'
-Classpath:
- - C:\Users\maxba\.gradle\caches\forge_gradle\maven_downloader\net\minecraftforge\accesstransformers\8.0.7\accesstransformers-8.0.7-fatjar.jar
-Working directory: C:\Users\maxba\IdeaProjects\The-Outer-End-Revamp\build\_atJar_4
-Main class: net.minecraftforge.accesstransformer.TransformerProcessor
-====================================

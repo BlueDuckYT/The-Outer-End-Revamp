@@ -1,6 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "#is_end",
-  "features": "outer_end:crag_moon_feature",
-  "step": "local_modifications"
-}

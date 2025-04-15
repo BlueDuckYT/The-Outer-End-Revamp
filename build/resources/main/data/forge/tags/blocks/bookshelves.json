@@ -1,9 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    {
-      "id": "outer_end:azure_bookshelf",
-      "required": false
-    }
-  ]
-}

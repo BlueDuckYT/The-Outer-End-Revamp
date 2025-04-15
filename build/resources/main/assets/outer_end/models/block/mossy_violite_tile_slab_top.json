@@ -1,8 +1,0 @@
-{
-  "parent": "block/slab_top",
-  "textures": {
-    "bottom": "outer_end:block/mossy_violite_tiles",
-    "top": "outer_end:block/mossy_violite_tiles",
-    "side": "outer_end:block/mossy_violite_tiles"
-  }
-}
