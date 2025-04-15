@@ -176,9 +176,6 @@ public class Himmelite extends Monster {
                     LivingEntity target = this.mob.getTarget();
                     this.path = this.mob.getNavigation().createPath(target, 0);
                 }
-            } else if (canContinueToUse()) {
-//                LivingEntity target = this.mob.getTarget();
-//                this.mob.lookAt(EntityAnchorArgument.Anchor.FEET, target.position());
             }
         }
 
