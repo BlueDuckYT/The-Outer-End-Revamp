@@ -68,34 +68,6 @@ public class Himmelite extends Monster {
         return checkMobSpawnRules(entityType, level, type, pos, rand);
     }
 
-    // synced data
-    @Override
-    protected void defineSynchedData() {
-        super.defineSynchedData();
-        this.entityData.define(BITE_FACTOR, 0);
-    }
-
-    // === BITE DATA ===
-    public void setBiteFactor(int amt) {
-        this.entityData.set(BITE_FACTOR, amt);
-    }
-
-    public void incrementBiteFactor(int amt) {
-        this.entityData.set(BITE_FACTOR, getBiteFactor() + amt);
-    }
-
-    public int getBiteFactor() {
-        return this.entityData.get(BITE_FACTOR);
-    }
-
-    public int getLastBiteFactor() {
-        return lastBiteFactor;
-    }
-
-    public void updateBiteFactor() {
-        updateLastFactor = true;
-    }
-
     public SoundEvent getAmbientSound() {
         return OuterEndSounds.ENTITY_HIMMELITE_IDLE.get();
     }
@@ -155,9 +127,7 @@ public class Himmelite extends Monster {
         Path path;
         BlockPos target;
 
-        @Override
-        public void start() {
-            super.start();
+        private void makePath() {
             Vec2 v2 = new Vec2(
                     (float) this.mob.getLookAngle().x,
                     (float) this.mob.getLookAngle().z
@@ -179,6 +149,12 @@ public class Himmelite extends Monster {
         }
 
         @Override
+        public void start() {
+            super.start();
+            makePath();
+        }
+
+        @Override
         public void tick() {
             // TODO: every x ticks, double check path
             if ((ticksSinceLastCheck--) < 0) {
@@ -191,14 +167,21 @@ public class Himmelite extends Monster {
 
             this.mob.getNavigation().moveTo(path, 1.0);
 
+            LivingEntity target = this.mob.getTarget();
+            if (target == null) {
+                retreating = false;
+                return;
+            }
+
             if (
-                    path == null ||
-                            path.isDone() ||
-                            mob.position().distanceToSqr(
-                                    path.getEndNode().x,
-                                    mob.position().y,
-                                    path.getEndNode().z
-                            ) < 0.75
+                    (
+                            path == null ||
+                                    this.mob.position().distanceTo(path.getEndNode().asVec3()) <= 5
+                    )
+            ) {
+                makePath();
+            } else if (
+                    this.mob.distanceTo(target) >= 10
             ) {
                 // allow attack to start again
                 retreating = false;
@@ -215,12 +198,17 @@ public class Himmelite extends Monster {
         @Override
         protected void checkAndPerformAttack(LivingEntity pEnemy, double pDistToEnemySqr) {
             double d0 = this.getAttackReachSqr(pEnemy);
+
             if (pDistToEnemySqr <= d0) {
-                this.resetAttackCooldown();
-                this.mob.swing(InteractionHand.MAIN_HAND);
-                this.mob.doHurtTarget(pEnemy);
-                // engage retreat upon attack
-                retreating = true;
+                if (getBiteFactor() == 16) {
+                    setBiteFactor(17);
+
+                    this.resetAttackCooldown();
+                    this.mob.swing(InteractionHand.MAIN_HAND);
+                    this.mob.doHurtTarget(pEnemy);
+                    // engage retreat upon attack
+                    retreating = true;
+                }
             }
         }
 
@@ -232,13 +220,6 @@ public class Himmelite extends Monster {
                 if (canContinueToUse()) {
                     LivingEntity target = this.mob.getTarget();
                     this.path = this.mob.getNavigation().createPath(target, 0);
-
-                    if (this.mob.distanceTo(target) <= 2) {
-                        if (getBiteFactor() == 16) {
-                            setBiteFactor(17);
-                            retreating = true;
-                        }
-                    }
                 }
             }
         }
@@ -270,5 +251,34 @@ public class Himmelite extends Monster {
         public boolean canContinueToUse() {
             return super.canContinueToUse() && !retreating;
         }
+
+    }
+
+    // synced data
+    @Override
+    protected void defineSynchedData() {
+        super.defineSynchedData();
+        this.entityData.define(BITE_FACTOR, 0);
+    }
+
+    // === BITE DATA ===
+    public void setBiteFactor(int amt) {
+        this.entityData.set(BITE_FACTOR, amt);
+    }
+
+    public void incrementBiteFactor(int amt) {
+        this.entityData.set(BITE_FACTOR, getBiteFactor() + amt);
+    }
+
+    public int getBiteFactor() {
+        return this.entityData.get(BITE_FACTOR);
+    }
+
+    public int getLastBiteFactor() {
+        return lastBiteFactor;
+    }
+
+    public void updateBiteFactor() {
+        updateLastFactor = true;
     }
 }
