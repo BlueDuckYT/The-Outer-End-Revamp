@@ -60,34 +60,38 @@ public class HimmeliteModel<T extends Himmelite> extends EntityModel<T> {
     public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
         float pct = ageInTicks - entity.tickCount;
 
-        body.getChild("hips").getChild("frontrightleg").xRot = (float) (Math.sin(limbSwing / 2) * limbSwingAmount);
-        body.getChild("hips").getChild("frontleftleg").xRot = -body.getChild("hips").getChild("frontrightleg").xRot;
-        body.getChild("hips").getChild("backrightleg").xRot = -body.getChild("hips").getChild("frontrightleg").xRot;
-        body.getChild("hips").getChild("backleftleg").xRot = body.getChild("hips").getChild("frontrightleg").xRot;
+        // the getChild spam bothered me - GiantLuigi4
+        ModelPart hips = body.getChild("hips");
+        ModelPart referenceLeg = hips.getChild("frontrightleg");
+        ModelPart head = hips.getChild("head");
+        ModelPart upjaw = head.getChild("upjaw");
+        ModelPart downjaw = head.getChild("downjaw");
 
-        body.getChild("hips").getChild("head").getChild("upjaw").xRot = (float) ((float) (-Math.abs(Math.sin(limbSwing / 3)) * limbSwingAmount / 8f) - Math.toRadians(30));
-        body.getChild("hips").getChild("head").getChild("downjaw").xRot = (float) (-body.getChild("hips").getChild("head").getChild("upjaw").xRot - Math.toRadians(30));
-
-        ModelPart upjaw = body.getChild("hips").getChild("head").getChild("upjaw");
-        ModelPart downjaw = body.getChild("hips").getChild("head").getChild("downjaw");
+        // animate limbs
+        referenceLeg.xRot = (float) (Math.sin(limbSwing / 2) * limbSwingAmount);
+        hips.getChild("frontleftleg").xRot = -referenceLeg.xRot;
+        hips.getChild("backrightleg").xRot = -referenceLeg.xRot;
+        hips.getChild("backleftleg").xRot = referenceLeg.xRot;
 
         if (entity.getBiteFactor() >= 1) {
+            // animate chomp
             int start = entity.getLastBiteFactor();
             int end = entity.getBiteFactor();
             if (end == entity.getLastBiteFactor()) {
                 if (entity.getBiteFactor() <= 15)
                     end += 1;
-                if (end > 17) {
+
+                if (end > 17) { // >17 is drawn as default state
                     start = 0;
                     end = 0;
-                }
-                if (end == 17)
+                } else if (end == 17) // 17 is currently biting
                     end = 0;
             }
 
             upjaw.xRot = (float) -Math.toRadians(Mth.lerp(pct, start, end) * 2);
             entity.updateBiteFactor();
         } else {
+            // animate jaws
             upjaw.xRot = -Math.abs(Mth.sin(limbSwing / 3)) * limbSwingAmount / 8f;
         }
         downjaw.xRot = -upjaw.xRot;

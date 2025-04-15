@@ -133,7 +133,7 @@ public class Himmelite extends Monster {
                     (float) this.mob.getLookAngle().z
             ).normalized();
 
-            Vec3 targ = this.mob.position().add(new Vec3(v2.x * -16, 0, v2.y * -16));
+            Vec3 targ = this.mob.position().add(new Vec3(v2.x * -20, 0, v2.y * -20));
             int y = this.mob.level().getHeight(
                     Heightmap.Types.MOTION_BLOCKING,
                     Mth.floor(targ.x),
@@ -143,9 +143,6 @@ public class Himmelite extends Monster {
             this.path = this.mob.getNavigation().createPath(target, 1);
             if (path != null)
                 this.mob.getNavigation().moveTo(path, 1.0);
-//            else {
-//                System.out.println("Got null path");
-//            }
         }
 
         @Override
@@ -156,15 +153,6 @@ public class Himmelite extends Monster {
 
         @Override
         public void tick() {
-            // TODO: every x ticks, double check path
-            if ((ticksSinceLastCheck--) < 0) {
-                Path pth = this.mob.getNavigation().createPath(target, 1);
-                ;
-                if (pth != null)
-                    this.path = pth;
-                ticksSinceLastCheck = 5;
-            }
-
             this.mob.getNavigation().moveTo(path, 1.0);
 
             LivingEntity target = this.mob.getTarget();
@@ -175,22 +163,34 @@ public class Himmelite extends Monster {
 
             double d2Targ = this.mob.distanceTo(target);
             boolean farEnough = d2Targ >= 10;
-            Vec3 pos = this.mob.position();
-            if (
-                    (
-                            path == null ||
-                                    this.path.isDone() ||
-                                    new Vec3(pos.x, path.getEndNode().y, pos.z).distanceTo(path.getEndNode().asVec3()) <= 2
-                    )
-            ) {
-                makePath();
-            } else if (
-                    farEnough
-            ) {
-                // allow attack to start again
+
+            // if the entity is far enough away from the player, it can go back to trying to attack
+            if (farEnough) {
                 retreating = false;
                 justFinishedRetreat = true;
+                return; // that ends this goal, so don't evaluate paths
             }
+
+            // if the path is done, then a new path must be made
+            if (pathDone()) {
+                makePath();
+                return; // recomputing the path on this tick would be redundant
+            }
+
+            // recompute path every few ticks to update for obstacles
+            if ((ticksSinceLastCheck--) < 0) {
+                Path pth = this.mob.getNavigation().createPath(target, 1);
+                if (pth != null)
+                    this.path = pth;
+                ticksSinceLastCheck = 5;
+            }
+        }
+
+        private boolean pathDone() {
+            Vec3 pos = this.mob.position();
+            return path == null ||
+                    this.path.isDone() ||
+                    new Vec3(pos.x, path.getEndNode().y, pos.z).distanceTo(path.getEndNode().asVec3()) <= 1;
         }
     }
 
@@ -223,7 +223,10 @@ public class Himmelite extends Monster {
             if (path == null || path.isDone()) {
                 if (canContinueToUse()) {
                     LivingEntity target = this.mob.getTarget();
-                    this.path = this.mob.getNavigation().createPath(target, 0);
+                    Path pth = this.mob.getNavigation().createPath(target, 1);
+                    // make sure the new path exists before setting the path
+                    if (pth != null)
+                        this.path = pth;
                 }
             }
         }
