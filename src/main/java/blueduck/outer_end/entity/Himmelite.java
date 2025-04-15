@@ -143,9 +143,9 @@ public class Himmelite extends Monster {
             this.path = this.mob.getNavigation().createPath(target, 1);
             if (path != null)
                 this.mob.getNavigation().moveTo(path, 1.0);
-            else {
-                System.out.println("Got null path");
-            }
+//            else {
+//                System.out.println("Got null path");
+//            }
         }
 
         @Override
@@ -173,15 +173,19 @@ public class Himmelite extends Monster {
                 return;
             }
 
+            double d2Targ = this.mob.distanceTo(target);
+            boolean farEnough = d2Targ >= 10;
+            Vec3 pos = this.mob.position();
             if (
                     (
                             path == null ||
-                                    this.mob.position().distanceTo(path.getEndNode().asVec3()) <= 5
+                                    this.path.isDone() ||
+                                    new Vec3(pos.x, path.getEndNode().y, pos.z).distanceTo(path.getEndNode().asVec3()) <= 2
                     )
             ) {
                 makePath();
             } else if (
-                    this.mob.distanceTo(target) >= 10
+                    farEnough
             ) {
                 // allow attack to start again
                 retreating = false;
