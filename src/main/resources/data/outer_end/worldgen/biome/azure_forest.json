@@ -46,7 +46,14 @@
   "spawners": {
     "ambient": [],
     "axolotls": [],
-    "creature": [],
+    "creature": [
+      {
+      "type": "outer_end:spectrafly",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 10
+    }
+    ],
     "misc": [],
     "monster": [
       {

@@ -155,8 +155,8 @@ dependencies {
     // The "userdev" classifier will be requested and setup by ForgeGradle.
     // If the group id is "net.minecraft" and the artifact id is one of ["client", "server", "joined"],
     // then special handling is done to allow a setup of a vanilla dependency without the use of an external repository.
-    minecraft "net.minecraftforge:forge:1.20.1-47.0.46"
-    implementation fg.deobf("curse.maven:blueprint-382216:4594238")
+    minecraft "net.minecraftforge:forge:1.20.1-47.4.6"
+    implementation fg.deobf("curse.maven:blueprint-382216:6408581")
     compileOnly(fg.deobf("mezz.jei:jei-1.20.1-common-api:15.2.0.27"))
     compileOnly(fg.deobf("mezz.jei:jei-1.20.1-forge-api:15.2.0.27"))
     // at runtime, use the full JEI jar for Forge

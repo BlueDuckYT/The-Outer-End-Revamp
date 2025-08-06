@@ -4,16 +4,14 @@ import blueduck.outer_end.TheOuterEnd;
 import blueduck.outer_end.block.*;
 import blueduck.outer_end.feature.helpers.AzureTreeGrower;
 import com.mojang.datafixers.util.Pair;
-import com.teamabnormals.blueprint.common.block.VerticalSlabBlock;
+import com.teamabnormals.blueprint.common.block.LogBlock;
+import com.teamabnormals.blueprint.common.block.WoodBlock;
 import com.teamabnormals.blueprint.common.block.chest.BlueprintChestBlock;
 import com.teamabnormals.blueprint.common.block.chest.BlueprintTrappedChestBlock;
 import com.teamabnormals.blueprint.common.block.sign.BlueprintCeilingHangingSignBlock;
 import com.teamabnormals.blueprint.common.block.sign.BlueprintStandingSignBlock;
 import com.teamabnormals.blueprint.common.block.sign.BlueprintWallHangingSignBlock;
 import com.teamabnormals.blueprint.common.block.sign.BlueprintWallSignBlock;
-import com.teamabnormals.blueprint.common.block.wood.LogBlock;
-import com.teamabnormals.blueprint.common.block.wood.WoodBlock;
-import com.teamabnormals.blueprint.common.block.wood.WoodPostBlock;
 import com.teamabnormals.blueprint.common.item.FuelBlockItem;
 import com.teamabnormals.blueprint.core.util.PropertyUtil;
 import com.teamabnormals.blueprint.core.util.registry.BlockSubRegistryHelper;
@@ -48,7 +46,7 @@ public class OuterEndBlocks {
     public static final RegistryObject<Block> AZURE_VERTICAL_PLANKS = registerQuarkBlock("azure_vertical_planks", () -> new Block(Block.Properties.copy(AZURE_PLANKS.get())));
 
     public static final RegistryObject<Block> AZURE_SLAB = registerBlock("azure_slab", () -> new SlabBlock(Block.Properties.copy(Blocks.OAK_PLANKS)));
-    public static final RegistryObject<Block> AZURE_VERTICAL_SLAB = registerQuarkBlock("azure_vertical_slab", () -> new VerticalSlabBlock(Block.Properties.copy(Blocks.OAK_PLANKS)));
+    //public static final RegistryObject<Block> AZURE_VERTICAL_SLAB = registerQuarkBlock("azure_vertical_slab", () -> new VerticalSlabBlock(Block.Properties.copy(Blocks.OAK_PLANKS)));
 
     public static final RegistryObject<Block> AZURE_STAIRS = registerBlock("azure_stairs", () -> new StairBlock(() -> AZURE_PLANKS.get().defaultBlockState(), Block.Properties.copy(Blocks.OAK_STAIRS)));
     public static final RegistryObject<Block> AZURE_DOOR = registerBlock("azure_door", () -> new DoorBlock(Block.Properties.copy(Blocks.OAK_PLANKS).noOcclusion(), BlockSetType.MANGROVE));
@@ -57,14 +55,14 @@ public class OuterEndBlocks {
     public static final RegistryObject<Block> AZURE_FENCE_GATE = registerBlock("azure_fence_gate", () -> new FenceGateBlock(Block.Properties.copy(Blocks.OAK_PLANKS), WoodType.MANGROVE));
     public static final RegistryObject<Block> AZURE_BUTTON = registerBlock("azure_button", () -> new ButtonBlock(Block.Properties.copy(Blocks.OAK_BUTTON), BlockSetType.MANGROVE, 30, true));
     public static final RegistryObject<Block> AZURE_PRESSURE_PLATE = registerBlock("azure_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, Block.Properties.copy(Blocks.OAK_PRESSURE_PLATE), BlockSetType.MANGROVE));
-    public static final Pair<RegistryObject<BlueprintStandingSignBlock>, RegistryObject<BlueprintWallSignBlock>> AZURE_SIGNS = HELPER.createSignBlock("azure", AZURE, MapColor.COLOR_BLUE);
-    public static final Pair<RegistryObject<BlueprintCeilingHangingSignBlock>, RegistryObject<BlueprintWallHangingSignBlock>> AZURE_HANGING_SIGNS = HELPER.createHangingSignBlock("azure", AZURE, MapColor.COLOR_BLUE);
+    public static final Pair<RegistryObject<BlueprintStandingSignBlock>, RegistryObject<BlueprintWallSignBlock>> AZURE_SIGNS = HELPER.createSignBlock("azure", AZURE, Block.Properties.copy(Blocks.OAK_SIGN));
+    public static final Pair<RegistryObject<BlueprintCeilingHangingSignBlock>, RegistryObject<BlueprintWallHangingSignBlock>> AZURE_HANGING_SIGNS = HELPER.createHangingSignBlock("azure", AZURE, Block.Properties.copy(Blocks.OAK_SIGN));
 
     public static final RegistryObject<Block> AZURE_LADDER = registerQuarkBlock("azure_ladder", () -> new LadderBlock(Block.Properties.copy(Blocks.LADDER)));
     public static final RegistryObject<Block> AZURE_BOOKSHELF = registerQuarkBlock("azure_bookshelf", () -> new Block(Block.Properties.copy(Blocks.BOOKSHELF)));
 
-    public static final RegistryObject<Block> AZURE_POST = registerQuarkBlock("azure_post", () -> new WoodPostBlock(() -> ForgeRegistries.BLOCKS.getValue(new ResourceLocation(TheOuterEnd.MODID, "stripped_azure_post")), Block.Properties.copy(Blocks.OAK_LOG)));
-    public static final RegistryObject<Block> STRIPPED_AZURE_POST = registerQuarkBlock("stripped_azure_post", () -> new WoodPostBlock(() -> ForgeRegistries.BLOCKS.getValue(new ResourceLocation(TheOuterEnd.MODID, "stripped_azure_post")), Block.Properties.copy(Blocks.OAK_LOG)));
+    //public static final RegistryObject<Block> AZURE_POST = registerQuarkBlock("azure_post", () -> new WoodPostBlock(() -> ForgeRegistries.BLOCKS.getValue(new ResourceLocation(TheOuterEnd.MODID, "stripped_azure_post")), Block.Properties.copy(Blocks.OAK_LOG)));
+    //public static final RegistryObject<Block> STRIPPED_AZURE_POST = registerQuarkBlock("stripped_azure_post", () -> new WoodPostBlock(() -> ForgeRegistries.BLOCKS.getValue(new ResourceLocation(TheOuterEnd.MODID, "stripped_azure_post")), Block.Properties.copy(Blocks.OAK_LOG)));
 
     public static final RegistryObject<Block> AZURE_CHEST = registerQuarkChest("azure", Block.Properties.copy(Blocks.CHEST), false);
     public static final RegistryObject<Block> AZURE_TRAPPED_CHEST = registerQuarkChest("azure", Block.Properties.copy(Blocks.TRAPPED_CHEST), true);
@@ -85,21 +83,21 @@ public class OuterEndBlocks {
     public static final RegistryObject<Block> HIMMEL_BLOCK = registerBlock("himmel_block", () -> new Block(Block.Properties.copy(Blocks.PURPUR_BLOCK).mapColor(MapColor.COLOR_LIGHT_BLUE)));
     public static final RegistryObject<Block> HIMMEL_PILLAR = registerBlock("himmel_pillar", () -> new RotatedPillarBlock(Block.Properties.copy(HIMMEL_BLOCK.get())));
     public static final RegistryObject<Block> HIMMEL_SLAB = registerBlock("himmel_slab", () -> new SlabBlock(Block.Properties.copy(HIMMEL_BLOCK.get())));
-    public static final RegistryObject<Block> HIMMEL_VERTICAL_SLAB = registerQuarkBlock("himmel_vertical_slab", () -> new VerticalSlabBlock(Block.Properties.copy(HIMMEL_BLOCK.get())));
+    //public static final RegistryObject<Block> HIMMEL_VERTICAL_SLAB = registerQuarkBlock("himmel_vertical_slab", () -> new VerticalSlabBlock(Block.Properties.copy(HIMMEL_BLOCK.get())));
 
     public static final RegistryObject<Block> HIMMEL_STAIRS = registerBlock("himmel_stairs", () -> new StairBlock(() -> HIMMEL_BLOCK.get().defaultBlockState(), Block.Properties.copy(HIMMEL_BLOCK.get())));
 
 
     public static final RegistryObject<Block> VIOLITE = registerBlock("violite", () -> new Block(Block.Properties.of().mapColor(MapColor.COLOR_PURPLE).explosionResistance(6.0f).requiresCorrectToolForDrops().strength(2.0f).sound(OuterEndSounds.VIOLITE_SOUND)));
     public static final RegistryObject<Block> VIOLITE_SLAB = registerBlock("violite_slab", () -> new SlabBlock(Block.Properties.copy(VIOLITE.get())));
-    public static final RegistryObject<Block> VIOLITE_VERTICAL_SLAB = registerQuarkBlock("violite_vertical_slab", () -> new VerticalSlabBlock(Block.Properties.copy(VIOLITE.get())));
+    //public static final RegistryObject<Block> VIOLITE_VERTICAL_SLAB = registerQuarkBlock("violite_vertical_slab", () -> new VerticalSlabBlock(Block.Properties.copy(VIOLITE.get())));
 
     public static final RegistryObject<Block> VIOLITE_STAIRS = registerBlock("violite_stairs", () -> new StairBlock(() -> VIOLITE.get().defaultBlockState(), Block.Properties.copy(VIOLITE.get())));
 
 
     public static final RegistryObject<Block> VIOLITE_BRICKS = registerBlock("violite_bricks", () -> new Block(Block.Properties.copy(VIOLITE.get())));
     public static final RegistryObject<Block> VIOLITE_BRICK_SLAB = registerBlock("violite_brick_slab", () -> new SlabBlock(Block.Properties.copy(VIOLITE.get())));
-    public static final RegistryObject<Block> VIOLITE_BRICK_VERTICAL_SLAB = registerQuarkBlock("violite_brick_vertical_slab", () -> new VerticalSlabBlock(Block.Properties.copy(VIOLITE.get())));
+    //public static final RegistryObject<Block> VIOLITE_BRICK_VERTICAL_SLAB = registerQuarkBlock("violite_brick_vertical_slab", () -> new VerticalSlabBlock(Block.Properties.copy(VIOLITE.get())));
     public static final RegistryObject<Block> VIOLITE_BRICK_STAIRS = registerBlock("violite_brick_stairs", () -> new StairBlock(() -> VIOLITE_BRICKS.get().defaultBlockState(), Block.Properties.copy(VIOLITE.get())));
     public static final RegistryObject<Block> VIOLITE_BRICK_WALL = registerBlock("violite_brick_wall", () -> new WallBlock(Block.Properties.copy(VIOLITE.get())));
     public static final RegistryObject<Block> VIOLITE_BRICK_PILLAR = registerBlock("violite_brick_pillar", () -> new RotatedPillarBlock(Block.Properties.copy(VIOLITE.get())));
@@ -107,7 +105,7 @@ public class OuterEndBlocks {
 
     public static final RegistryObject<Block> MOSSY_VIOLITE_BRICKS = registerBlock("mossy_violite_bricks", () -> new Block(Block.Properties.copy(VIOLITE.get())));
     public static final RegistryObject<Block> MOSSY_VIOLITE_BRICK_SLAB = registerBlock("mossy_violite_brick_slab", () -> new SlabBlock(Block.Properties.copy(VIOLITE.get())));
-    public static final RegistryObject<Block> MOSSY_VIOLITE_BRICK_VERTICAL_SLAB = registerQuarkBlock("mossy_violite_brick_vertical_slab", () -> new VerticalSlabBlock(Block.Properties.copy(VIOLITE.get())));
+    //public static final RegistryObject<Block> MOSSY_VIOLITE_BRICK_VERTICAL_SLAB = registerQuarkBlock("mossy_violite_brick_vertical_slab", () -> new VerticalSlabBlock(Block.Properties.copy(VIOLITE.get())));
     public static final RegistryObject<Block> MOSSY_VIOLITE_BRICK_STAIRS = registerBlock("mossy_violite_brick_stairs", () -> new StairBlock(() -> MOSSY_VIOLITE_BRICKS.get().defaultBlockState(), Block.Properties.copy(VIOLITE.get())));
     public static final RegistryObject<Block> MOSSY_VIOLITE_BRICK_WALL = registerBlock("mossy_violite_brick_wall", () -> new WallBlock(Block.Properties.copy(VIOLITE.get())));
 
@@ -116,13 +114,13 @@ public class OuterEndBlocks {
 
     public static final RegistryObject<Block> VIOLITE_TILES = registerBlock("violite_tiles", () -> new Block(Block.Properties.copy(VIOLITE.get())));
     public static final RegistryObject<Block> VIOLITE_TILE_SLAB = registerBlock("violite_tile_slab", () -> new SlabBlock(Block.Properties.copy(VIOLITE.get())));
-    public static final RegistryObject<Block> VIOLITE_TILE_VERTICAL_SLAB = registerQuarkBlock("violite_tile_vertical_slab", () -> new VerticalSlabBlock(Block.Properties.copy(VIOLITE.get())));
+    //public static final RegistryObject<Block> VIOLITE_TILE_VERTICAL_SLAB = registerQuarkBlock("violite_tile_vertical_slab", () -> new VerticalSlabBlock(Block.Properties.copy(VIOLITE.get())));
     public static final RegistryObject<Block> VIOLITE_TILE_STAIRS = registerBlock("violite_tile_stairs", () -> new StairBlock(() -> VIOLITE_TILES.get().defaultBlockState(), Block.Properties.copy(VIOLITE.get())));
 
 
     public static final RegistryObject<Block> MOSSY_VIOLITE_TILES = registerBlock("mossy_violite_tiles", () -> new Block(Block.Properties.copy(VIOLITE.get())));
     public static final RegistryObject<Block> MOSSY_VIOLITE_TILE_SLAB = registerBlock("mossy_violite_tile_slab", () -> new SlabBlock(Block.Properties.copy(VIOLITE.get())));
-    public static final RegistryObject<Block> MOSSY_VIOLITE_TILE_VERTICAL_SLAB = registerQuarkBlock("mossy_violite_tile_vertical_slab", () -> new VerticalSlabBlock(Block.Properties.copy(VIOLITE.get())));
+    //public static final RegistryObject<Block> MOSSY_VIOLITE_TILE_VERTICAL_SLAB = registerQuarkBlock("mossy_violite_tile_vertical_slab", () -> new VerticalSlabBlock(Block.Properties.copy(VIOLITE.get())));
     public static final RegistryObject<Block> MOSSY_VIOLITE_TILE_STAIRS = registerBlock("mossy_violite_tile_stairs", () -> new StairBlock(() -> MOSSY_VIOLITE_TILES.get().defaultBlockState(), Block.Properties.copy(VIOLITE.get())));
 
     public static final RegistryObject<Block> CRACKED_VIOLITE_TILES = registerBlock("cracked_violite_tiles", () -> new Block(Block.Properties.copy(VIOLITE.get())));

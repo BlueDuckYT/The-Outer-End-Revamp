@@ -108,9 +108,11 @@ public class OuterEndItems {
     public static final RegistryObject<ForgeSpawnEggItem> STALKER_SPAWN_EGG = ITEMS.register("stalker_spawn_egg",
             () -> new ForgeSpawnEggItem(OuterEndEntities.STALKER, 10105599, 7538267,
                     new Item.Properties()));
-//    public static final RegistryObject<ForgeSpawnEggItem> SPECTRAFLY_SPAWN_EGG = ITEMS.register("spectrafly_spawn_egg",
-//            () -> new ForgeSpawnEggItem(OuterEndEntities.SPECTRAFLY, 3093129, 11056703,
-//                    new Item.Properties()));
+
+    public static final RegistryObject<ForgeSpawnEggItem> SPECTRAFLY_SPAWN_EGG = ITEMS.register("spectrafly_spawn_egg",
+            () -> new ForgeSpawnEggItem(OuterEndEntities.SPECTRAFLY, 3093129, 11056703,
+                    new Item.Properties()));
+
     public static final RegistryObject<ForgeSpawnEggItem> SINKER_SPAWN_EGG = ITEMS.register("sinker_spawn_egg",
             () -> new ForgeSpawnEggItem(OuterEndEntities.SINKER, 3093129, 11056703,
                     new Item.Properties()));
