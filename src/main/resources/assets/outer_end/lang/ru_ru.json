@@ -1,0 +1,214 @@
+{
+  "block.outer_end.azure_stem": "Лазурный стебель",
+  "block.outer_end.azure_pith": "Лазурная сердцевина",
+  "block.outer_end.azure_stripped_stem": "Обтёсанный лазурный стебель",
+  "block.outer_end.azure_stripped_pith": "Обтёсанная лазурная сердцевина",
+  "block.outer_end.azure_planks": "Лазурные доски",
+  "block.outer_end.azure_leaves": "Лазурные лепестки",
+  "block.outer_end.azure_stamen": "Лазурная тычинка",
+  "block.outer_end.azure_bud": "Лазурный бутон",
+  "block.outer_end.azure_grass": "Лазурная трава",
+  "block.outer_end.ender_roots": "Эндер-корни",
+  "block.outer_end.tall_ender_roots": "Высокие Эндер-корни",
+  "block.outer_end.azure_sprouts": "Лазурные ростки",
+  "block.outer_end.azure_vines": "Лазурная лоза",
+  "block.outer_end.azure_fence": "Лазурный забор",
+  "block.outer_end.azure_fence_gate": "Лазурная калитка",
+  "block.outer_end.azure_door": "Лазурная дверь",
+  "block.outer_end.azure_trapdoor": "Лазурный люк",
+  "block.outer_end.azure_pressure_plate": "Лазурная нажимная плита",
+  "block.outer_end.azure_button": "Лазурная кнопка",
+  "block.outer_end.azure_slab": "Лазурная плита",
+  "block.outer_end.azure_stairs": "Лазурные ступеньки",
+  "block.outer_end.azure_sign": "Лазурная табличка",
+  "block.outer_end.azure_hanging_sign": "Лазурная подвесная табличка",
+  "block.outer_end.azure_berry_vine": "Стебель лазурного ягодного черенка",
+  "block.outer_end.azure_berry_vine_top": "Лазурный ягодный черенок",
+  "block.outer_end.potted_azure_bud": "Лазурный бутон в горшке",
+  "block.outer_end.potted_ender_roots": "Эндер-корни в горшке",
+  "block.outer_end.potted_azure_sprouts": "Лазурные ростки в горшке",
+
+  "block.outer_end.azure_vertical_slab": "Лазурная вертикальная плита",
+  "block.outer_end.azure_vertical_planks": "Лазурные вертикальные ступеньки",
+  "block.outer_end.azure_ladder": "Лазурная лестница",
+  "block.outer_end.azure_bookshelf": "Лазурная книжная полка",
+  "block.outer_end.azure_beehive": "Лазурный пчелиный улей",
+  "block.outer_end.azure_chest": "Лазурный сундук",
+  "block.outer_end.azure_trapped_chest": "Лазурный сундук-ловушка",
+  "block.outer_end.azure_post": "Лазурный столб",
+  "block.outer_end.stripped_azure_post": "Обтёсанный лазурный столб",
+
+  "block.outer_end.himmel_block": "Химмелевый блок",
+  "block.outer_end.himmel_pillar": "Химмелевый пилон",
+  "block.outer_end.himmel_stairs": "Химмелевые ступеньки",
+  "block.outer_end.himmel_slab": "Химмелевая плита",
+  "block.outer_end.himmel_vertical_slab": "Химмелевая вертикальная плита",
+
+  "block.outer_end.violite": "Виолит",
+  "block.outer_end.violite_slab": "Виолитовая плита",
+  "block.outer_end.violite_stairs": "Виолитовые ступеньки",
+  "block.outer_end.violite_vertical_slab": "Виолитовая вертикальная плита",
+
+
+  "block.outer_end.rose_tangled_violite": "Увитый розовый виолит",
+  "block.outer_end.mint_tangled_violite": "Увитый мятный виолит",
+  "block.outer_end.cobalt_tangled_violite": "Увитый кобальтовый виолит",
+
+  "block.outer_end.violite_bricks": "Виолитовые кирпичи",
+  "block.outer_end.violite_brick_stairs": "Ступеньки из виолитового кирпича",
+  "block.outer_end.violite_brick_slab": "Плита из виолитового кирпича",
+  "block.outer_end.violite_brick_vertical_slab": "Вертикальная плита из виолитового кирпича",
+  "block.outer_end.violite_brick_wall": "Ограда из виолитового кирпича",
+  "block.outer_end.chiseled_violite_bricks": "Резные виолитовые кирпичи",
+  "block.outer_end.violite_brick_pillar": "Пилон из виолитового кирпича",
+
+  "block.outer_end.mossy_violite_bricks": "Замшелые виолитовые кирпичи",
+  "block.outer_end.mossy_violite_brick_stairs": "Ступеньки из замшелого виолитового кирпича",
+  "block.outer_end.mossy_violite_brick_slab": "Плита из замшелого виолитового кирпича",
+  "block.outer_end.mossy_violite_brick_vertical_slab": "Вертикальная плита из замшелого виолитового кирпича",
+  "block.outer_end.mossy_violite_brick_wall": "Ограда из замшелого виолитового кирпича",
+
+  "block.outer_end.cracked_violite_bricks": "Потрескавшиеся виолитовые кирпичи",
+
+  "block.outer_end.violite_tiles": "Виолитовый плитняк",
+  "block.outer_end.violite_tile_stairs": "Ступеньки из виолитового плитняка",
+  "block.outer_end.violite_tile_slab": "Ограда из виолитового плитняка",
+  "block.outer_end.violite_tile_vertical_slab": "Вертикальная плита из виолитового плитняка",
+
+  "block.outer_end.mossy_violite_tiles": "Замшелый виолитовый плитняк",
+  "block.outer_end.mossy_violite_tile_stairs": "Ступеньки из замшелого виолитового плитняка",
+  "block.outer_end.mossy_violite_tile_slab": "Плита из замшелого виолитового плитняка",
+  "block.outer_end.mossy_violite_tile_vertical_slab": "Вертикальная плита из замшелого виолитового плитняка",
+
+  "block.outer_end.cracked_violite_tiles": "Потрескавшийся виолитовый плитняк",
+
+  "block.outer_end.rose_crystal": "Розовый кристалл",
+  "block.outer_end.mint_crystal": "Мятный кристалл",
+  "block.outer_end.cobalt_crystal": "Кобальтовый кристалл",
+
+
+  "block.outer_end.rose_crystal_bud": "Бутон розового кристалла",
+  "block.outer_end.mint_crystal_bud": "Бутон мятного кристалла",
+  "block.outer_end.cobalt_crystal_bud": "Бутон кобальтового кристалла",
+
+
+  "block.outer_end.rose_crystal_lamp": "Лампа из розового кристалла",
+  "block.outer_end.mint_crystal_lamp": "Лампа из мятного кристалла",
+  "block.outer_end.cobalt_crystal_lamp": "Лампа из кобальтового кристалла",
+
+
+  "block.outer_end.halite": "Галит",
+  "block.outer_end.stromatolite": "Строматолит",
+  "block.outer_end.brine": "Тузлук",
+  "block.outer_end.ancient_stone": "Древний камень",
+  "block.outer_end.ancient_ice": "Древний лёд",
+  "block.outer_end.ancient_ice_column": "Древняя ледяная колонна",
+  "block.outer_end.ancient_ice_cap": "Древняя ледяная шапка",
+  "block.outer_end.glowing_ancient_ice": "Светящийся древний лёд",
+  "block.outer_end.glowing_ancient_ice_column": "Светящаяся древняя ледяная колонна",
+  "block.outer_end.glowing_ancient_ice_cap": "Светящаяся древняя ледяная шапка",
+
+
+  "block.outer_end.rose_roots": "Розовые корни",
+  "block.outer_end.mint_roots": "Мятные корни",
+  "block.outer_end.cobalt_roots": "Кобальтовые корни",
+
+  "item.outer_end.azure_berries": "Лазурные ягоды",
+  "item.outer_end.rose_crystalline_berries": "Розовые кристаллические ягоды",
+  "item.outer_end.mint_crystalline_berries": "Мятные кристаллические ягоды",
+  "item.outer_end.cobalt_crystalline_berries": "Кобальтовые кристаллические ягоды",
+  "item.outer_end.rose_crystal_arrow": "Стрела из розового кристалла",
+  "item.outer_end.mint_crystal_arrow": "Стрела мятного розового кристалла",
+  "item.outer_end.cobalt_crystal_arrow": "Стрела из кобальтового кристалла",
+  "item.outer_end.floral_paste": "Цветочная паста",
+  "item.outer_end.spectragel": "Спектрагель",
+  "item.outer_end.stalker_meat": "Мясо сталкера",
+  "item.outer_end.cooked_stalker_meat": "Стейк из сталкера",
+  "item.outer_end.brine_bucket": "Ведро тузлука",
+  "item.outer_end.ominous_miasma_bucket": "Ведро зловещих миазм",
+  "item.outer_end.azure_boat": "Лазурная лодка",
+  "item.outer_end.azure_chest_boat": "Лазурная грузовая лодка",
+  "item.outer_end.halite_crystal": "Галитовый кристалл",
+  "item.outer_end.cured_chorus_fruit": "Вяленый плод хоруса",
+  "item.outer_end.cured_jerky": "Вяленое мясо",
+
+  "item.outer_end.rose_crystal_shard": "Осколок розового кристалла",
+  "item.outer_end.mint_crystal_shard": "Осколок мятного кристалла",
+  "item.outer_end.cobalt_crystal_shard": "Осколок кобальтового кристалла",
+
+  "item.outer_end.rose_upgrade_template": "Шаблон розового улучшения",
+  "item.outer_end.mint_upgrade_template": "Шаблон мятного улучшения",
+  "item.outer_end.cobalt_upgrade_template": "Шаблон кобальтового улучшения",
+
+  "item.outer_end.smithing_template.rose_crystal_upgrade.ingredients": "Осколки розового кристалла",
+  "item.outer_end.smithing_template.mint_crystal_upgrade.ingredients": "Осколки мятного кристалла",
+  "item.outer_end.smithing_template.cobalt_crystal_upgrade.ingredients": "Осколки кобальтового кристалла",
+
+  "upgrade.outer_end.rose_crystal_upgrade": "Улучшение розового кристалла",
+  "upgrade.outer_end.mint_crystal_upgrade": "Улучшение мятного кристалла",
+  "upgrade.outer_end.cobalt_crystal_upgrade": "Улучшение кобальтового кристалла",
+
+  "item.outer_end.rose_crystal_helmet": "Шлем из розового кристалла",
+  "item.outer_end.rose_crystal_chestplate": "Нагрудник из розового кристалла",
+  "item.outer_end.rose_crystal_leggings": "Поножи из розового кристалла",
+  "item.outer_end.rose_crystal_boots": "Ботинки из розового кристалла",
+
+  "item.outer_end.mint_crystal_helmet": "Шлем из мятного кристалла",
+  "item.outer_end.mint_crystal_chestplate": "Нагрудник из мятного кристалла",
+  "item.outer_end.mint_crystal_leggings": "Поножи из мятного кристалла",
+  "item.outer_end.mint_crystal_boots": "Ботинки из мятного кристалла",
+
+  "item.outer_end.cobalt_crystal_helmet": "Шлем из кобальтового кристалла",
+  "item.outer_end.cobalt_crystal_chestplate": "Нагрудник из кобальтового кристалла",
+  "item.outer_end.cobalt_crystal_leggings": "Поножи из кобальтового кристалла",
+  "item.outer_end.cobalt_crystal_boots": "Ботинки из кобальтового кристалла",
+
+  "item.outer_end.levitation_core": "Левитационное ядро",
+  "item.outer_end.sinker_tooth": "Зуб грузила",
+  "item.outer_end.sinker_shuriken": "Сюрикен грузила",
+  "item.outer_end.sinker_dagger": "Кинжал грузила",
+  "item.outer_end.shulker_shield": "Шалкеровый щит",
+
+  "item.outer_end.music_disc_galactic_wave": "Пластинка",
+  "item.outer_end.music_disc_galactic_wave.desc": "Blue Duck — Galactic Wave",
+
+  "item.outer_end.music_disc_unknown_frontier": "Пластинка",
+  "item.outer_end.music_disc_unknown_frontier.desc": "Pyrocide — Unknown Frontier",
+
+  
+  "item.outer_end.spectrafly_spawn_egg": "Яйцо призыва спектралёта",
+  "item.outer_end.himmelite_spawn_egg": "Яйцо призыва химмелита",
+  "item.outer_end.purpur_golem_spawn_egg": "Яйцо призыва пурпурового голема",
+  "item.outer_end.stalker_spawn_egg": "Яйцо призыва сталкера",
+  "item.outer_end.entombed_spawn_egg": "Яйцо призыва погребённого",
+  "item.outer_end.chorus_squid_spawn_egg": "Яйцо призыва хорусового спрута",
+  "item.outer_end.sinker_spawn_egg": "Яйцо призыва грузила",
+
+  "entity.outer_end.spectrafly": "Спектралёт",
+  "entity.outer_end.himmelite": "Химмелит",
+  "entity.outer_end.purpur_golem": "Пурпуровый голем",
+  "entity.outer_end.stalker": "Сталкер",
+  "entity.outer_end.entombed": "Погребённый",
+  "entity.outer_end.chorus_squid": "Хорусовый спрут",
+  "entity.outer_end.sinker": "Грузило",
+  "entity.outer_end.sinker_shuriken": "Сюрикен грузила",
+  "entity.outer_end.sinker_laser": "Лазер грузила",
+  "entity.outer_end.rose_crystal_arrow": "Стрела из розового кристалла",
+  "entity.outer_end.mint_crystal_arrow": "Стрела из мятного кристалла",
+  "entity.outer_end.cobalt_crystal_arrow": "Стрела из кобальтового кристалла",
+
+  "biome.outer_end.azure_forest": "Лазурный лес",
+  "biome.outer_end.crystal_crag": "Хрустальный утёс",
+  "biome.outer_end.primordial_pools": "Первобытные водоёмы",
+
+  "advancements.end.find_end_tower.title": "Корпоративный мегаполис",
+  "advancements.end.find_end_tower.description": "Войдите в башню Энда",
+
+  "advancements.end.find_catacombs.title": "Дальняя застава",
+  "advancements.end.find_catacombs.description": "Найдите катакомбы",
+
+  "advancements.end.explore_end.title": "За пределами пустоты",
+  "advancements.end.explore_end.description": "Исследуйте все биомы Энда",
+
+  "itemGroup.outer_end": "Внешний Энд"
+}
